@@ -8,9 +8,17 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const days = JSON.parse(fs.readFileSync(path.join(root, 'build', 'days.json'), 'utf8'));
 
 const SUBJECTS = {
-  pc: { name: '1과목 컴퓨터 일반' },
-  xl: { name: '2과목 스프레드시트 일반' },
+  pc: { name: '1과목 컴퓨터 일반', short: '컴퓨터 일반' },
+  xl: { name: '2과목 스프레드시트 일반', short: '스프레드시트 일반' },
 };
+
+// 과목별 기출 모의고사(CBT): build/exams/<과목>-<회차>.json
+const examDir = path.join(root, 'build', 'exams');
+const exams = fs.existsSync(examDir)
+  ? fs.readdirSync(examDir).filter(f => f.endsWith('.json'))
+      .map(f => ({ id: f.replace(/\.json$/, ''), ...JSON.parse(fs.readFileSync(path.join(examDir, f), 'utf8')) }))
+      .sort((a, b) => a.round - b.round)
+  : [];
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
@@ -50,7 +58,8 @@ let sections = '';
 for (const [key, s] of Object.entries(SUBJECTS)) {
   const list = days.filter(d => d.subject === key);
   if (!list.length) continue;
-  sections += `<div class="subject"><h2>${s.name}</h2><span>${list.length}일</span></div>
+  const hasExam = exams.some(x => x.subject === key);
+  sections += `<div class="subject"><h2>${s.name}</h2><span>${list.length}일</span>${hasExam ? `<a class="more" href="${key}/index.html">기출 모의고사 →</a>` : ''}</div>
 <div class="days">
 ${list.map(d => `  <a class="day-card ${key}" href="day${d.day}/index.html">
     <span class="num">${d.day}일차</span>
@@ -181,6 +190,112 @@ ${paras.length ? `<details class="script">
 <script src="../assets/audio.js"></script>`,
   }));
 });
+
+// 과목 페이지(pc/index.html)와 CBT 모의고사 페이지(pc/exam-1.html)
+for (const [key, s] of Object.entries(SUBJECTS)) {
+  const list = exams.filter(x => x.subject === key);
+  if (!list.length) continue;
+  const dayLinks = days.filter(d => d.subject === key);
+  write(`${key}/index.html`, page({
+    title: `${s.short} | 컴활2급`,
+    base: '../',
+    crumbs: `<a href="../index.html">전체</a> › ${s.short}`,
+    body: `<section class="hero">
+  <h1>${s.short}</h1>
+  <p>${s.name} — 기출 모의고사(CBT)와 일차별 학습</p>
+</section>
+<div class="subject"><h2>모의고사</h2><span>${list.length}회</span></div>
+<div class="exam-list">
+${list.map(x => `  <a class="exam-item" href="exam-${x.round}.html">
+    <div><strong>${esc(x.title)}</strong><span>${esc(x.source)} · ${x.questions.length}문제 · ${x.minutes}분</span></div>
+    <span class="btn">풀기</span>
+  </a>`).join('\n')}
+</div>
+<div class="subject"><h2>일차별 학습</h2><span>${dayLinks.length}일</span></div>
+<div class="days">
+${dayLinks.map(d => `  <a class="day-card ${key}" href="../day${d.day}/index.html">
+    <span class="num">${d.day}일차</span>
+    <h3>${esc(d.title)}</h3>
+    <p>${esc(d.topics)}</p>
+  </a>`).join('\n')}
+</div>`,
+  }));
+
+  for (const x of list) {
+    const data = JSON.stringify({ id: x.id, minutes: x.minutes, questions: x.questions }).replace(/</g, '\\u003c');
+    write(`${key}/exam-${x.round}.html`, page({
+      title: `${x.title} | 컴활2급`,
+      base: '../',
+      crumbs: `<a href="../index.html">전체</a> › <a href="index.html">${s.short}</a> › 모의고사 ${x.round}회`,
+      body: `<section id="intro">
+  <section class="hero">
+    <h1>${esc(x.title)}</h1>
+    <p>${esc(x.source)}</p>
+  </section>
+  <div class="cbt-intro">
+    <dl>
+      <dt>문항 수</dt><dd>${x.questions.length}문제 (4지선다)</dd>
+      <dt>제한 시간</dt><dd>${x.minutes}분</dd>
+      <dt>합격 기준</dt><dd>과목당 60점 이상 (평균 60점 이상)</dd>
+    </dl>
+    <ul>
+      <li>한 화면에 한 문제씩 나옵니다. 보기를 누르면 답이 표기되고, 같은 보기를 다시 누르면 취소됩니다.</li>
+      <li>답안 표기란에서 문제 번호를 눌러 바로 이동할 수 있습니다. (키보드: 1~4 답 선택, ← → 이동)</li>
+      <li>시간이 끝나면 표기한 답안으로 자동 채점됩니다. 풀던 내용은 이 기기에 저장되어 이어 풀 수 있습니다.</li>
+      <li>${esc(x.note)}</li>
+    </ul>
+    <button class="btn" id="start" type="button">시험 시작</button>
+    <div class="cbt-resume" id="resume" hidden><span id="resume-info"></span><button class="btn ghost" id="resume-btn" type="button">이어서 풀기</button></div>
+  </div>
+</section>
+
+<section id="exam" hidden>
+  <div class="cbt-top">
+    <span class="title">${esc(x.title)}</span>
+    <span class="timer" id="timer" title="남은 시간">00:00</span>
+    <span class="left-wrap" id="left-wrap">안 푼 문제 <b id="left">0</b></span>
+    <span class="font-ctl"><button class="chip" id="font-down" type="button" aria-label="글자 작게">가-</button><button class="chip" id="font-up" type="button" aria-label="글자 크게">가+</button></span>
+    <button class="chip" id="sheet-toggle" type="button">답안 표기란</button>
+  </div>
+  <div class="cbt-body">
+    <div class="cbt-main">
+      <div class="cbt-qhead"><span class="num" id="q-num">1</span><span>번</span><span class="prog" id="progress"></span></div>
+      <p id="q-text"></p>
+      <div class="cbt-opts" id="q-opts"></div>
+      <div class="cbt-nav">
+        <button class="btn ghost" id="prev" type="button">‹ 이전</button>
+        <button class="btn" id="next" type="button">다음 ›</button>
+      </div>
+    </div>
+    <aside class="cbt-sheet">
+      <h2>답안 표기란 <button class="chip" id="sheet-close" type="button">닫기</button></h2>
+      <div class="sheet-grid" id="sheet-grid"></div>
+      <button class="btn" id="submit" type="button">답안 제출</button>
+    </aside>
+  </div>
+</section>
+
+<dialog class="cbt-dialog" id="confirm">
+  <p id="confirm-msg"></p>
+  <div class="row"><button class="btn ghost" id="confirm-no" type="button">계속 풀기</button><button class="btn" id="confirm-yes" type="button">제출하기</button></div>
+</dialog>
+
+<section id="result" hidden>
+  <section class="hero"><h1>채점 결과</h1><p>${esc(x.title)} — ${esc(x.source)}</p></section>
+  <div class="score-card" id="score"></div>
+  <div class="sheet-grid result-grid" id="result-grid"></div>
+  <div class="quiz-actions">
+    <label><input type="checkbox" id="wrong-only"> 틀린 문제만 보기</label>
+    <button class="btn ghost" id="retry" type="button">다시 풀기</button>
+    <a href="index.html">${s.short} 목록</a>
+  </div>
+  <ol class="quiz-list" id="review"></ol>
+</section>
+<script id="exam-data" type="application/json">${data}</script>
+<script src="../assets/cbt.js"></script>`,
+    }));
+  }
+}
 
 // 일차별 메뉴 페이지
 days.forEach((d, i) => {

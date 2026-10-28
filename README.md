@@ -6,11 +6,13 @@
 
 - `index.html` — 메인 페이지 (일차별 링크)
 - `dayN/` — N일차 메뉴(`index.html`), 핵심정리(`summary.html`, `summary.pdf`), 모의고사(`quiz.html`), 음성 듣기(`audio.html`, `audio.mp3`)
-- `assets/` — 공통 스타일과 스크립트
+- `pc/` — 1과목 컴퓨터 일반 페이지(`index.html`)와 기출 CBT 모의고사(`exam-1.html` …)
+- `assets/` — 공통 스타일과 스크립트 (`cbt.js`: CBT 모의고사)
 - `build/` — 페이지 생성 원본
   - `days.json` — 일차 목록 (제목, 주제)
   - `summaries/dayN.html` — 핵심정리 원본
   - `quizzes/dayN.json` — 모의고사 문제 (`q` 문제, `o` 보기 4개, `a` 정답 번호 0~3, `e` 해설)
+  - `exams/<과목>-<회차>.json` — 기출 CBT 모의고사 (예: `pc-1.json` = 컴퓨터 일반 1회)
   - `build.mjs` — 생성 스크립트
 
 ## 새 일차 추가하기
