@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>컴활2급 6일차 핵심정리</title>
+<style>
+  @page { size: A4; margin: 18mm 17mm; }
+  body { font-family: "Malgun Gothic", "맑은 고딕", sans-serif; font-size: 10.5pt; line-height: 1.6; color: #222; }
+  h1 { text-align: center; color: #2f5496; font-size: 20pt; font-weight: normal; margin: 30px 0 6px; }
+  .sub { text-align: center; color: #2f5496; font-size: 13pt; margin-bottom: 18px; }
+  .src { margin: 0 30px 26px; font-size: 10pt; }
+  h2 { color: #4472c4; font-size: 15pt; font-weight: normal; margin: 30px 0 8px; page-break-after: avoid; }
+  h2 b { font-weight: bold; }
+  h3 { color: #4472c4; font-size: 12pt; font-weight: normal; margin: 18px 0 4px; page-break-after: avoid; }
+  h3 b { font-weight: bold; }
+  ul { margin: 4px 0 6px; padding-left: 26px; }
+  li { margin: 2px 0; }
+  table { border-collapse: collapse; width: 100%; margin: 6px 0 8px; font-size: 10pt; page-break-inside: avoid; }
+  th { text-align: left; font-weight: normal; border-bottom: 1px solid #000; padding: 3px 6px; }
+  td { padding: 3px 6px; vertical-align: top; }
+  code { font-family: Consolas, monospace; background: #f2f2f2; padding: 0 3px; }
+  .trap { color: #c00000; font-weight: bold; }
+  .point { border-bottom: 3px double #555; padding-bottom: 6px; margin-bottom: 10px; }
+  .foot { font-style: italic; margin-top: 30px; font-size: 10pt; }
+  .note { font-size: 9.5pt; color: #555; }
+</style>
+</head>
+<body>
+
+<h1>컴퓨터 활용능력 2급 필기 — 6일차 핵심 정리</h1>
+<div class="sub">스프레드시트 일반: 통합 문서 · 워크시트 · 화면 구성 · 시트 보호 · 데이터 입력 · 셀 편집 · 셀 서식 · 엑셀 옵션</div>
+<p class="src">출처: 강의 3편(6일차 1·2·3)의 YouTube 자막을 추출해 요약·재구성했습니다. 강의 중 잘못 말한 단축키 등은 바로잡아 표시했습니다. 이번 회차부터 2과목(스프레드시트 일반)입니다 — 엑셀을 직접 열어 실습하면서 보면 훨씬 쉽습니다.</p>
+
+<!-- ================= PART 1 ================= -->
+<h2><b>Part 1.</b> 통합 문서 · 워크시트 · 화면 구성</h2>
+
+<h3><b>1-1.</b> 통합 문서</h3>
+<ul>
+<li>엑셀 파일 하나 = <b>통합 문서(워크북)</b>. 기본 확장자 <b>.xlsx</b>. 새 문서는 통합 문서1, 2, 3… 순으로 이름이 붙음</li>
+<li>통합 문서 안에 <b>워크시트</b>가 여러 개, 워크시트는 <b>셀</b>로 구성. 시트는 <b>최소 1개</b> 있어야 함</li>
+<li>여러 통합 문서를 동시에 열 수 있음 (메모리 성능에 따라 느려질 수 있음)</li>
+</ul>
+<table>
+<tr><th>단축키</th><th>기능</th></tr>
+<tr><td><b>Ctrl + N</b></td><td>새 통합 문서</td></tr>
+<tr><td>Ctrl + O</td><td>열기</td></tr>
+<tr><td><b>Ctrl + S</b></td><td>저장</td></tr>
+<tr><td><b>Ctrl + F4 / Ctrl + W</b></td><td>통합 문서 창 닫기</td></tr>
+<tr><td><b>Shift + F11</b></td><td>새 워크시트 삽입</td></tr>
+</table>
+
+<h3><b>1-2.</b> 저장 시 일반 옵션 (다른 이름으로 저장 → 도구 → 일반 옵션)</h3>
+<table>
+<tr><th>옵션</th><th>설명</th></tr>
+<tr><td><b>백업 파일 항상 만들기</b></td><td>저장할 때마다 백업 파일 자동 생성, 확장자 <b>.xlk</b></td></tr>
+<tr><td><b>열기 암호</b></td><td>암호를 알아야 파일을 <b>열 수 있음</b> (모르면 못 엶)</td></tr>
+<tr><td><b>쓰기 암호</b></td><td>파일은 열 수 있지만 <b>수정 후 같은 이름으로 저장</b>하려면 암호 필요. 모르면 읽기 전용으로 열기 가능, <b>다른 이름으로 저장은 가능</b></td></tr>
+<tr><td>읽기 전용 권장</td><td>암호가 아님. 열 때 읽기 전용으로 열지 <b>예/아니요를 묻는 메시지</b>만 표시</td></tr>
+</table>
+<ul><li><span class="trap">함정</span>: “쓰기 암호가 있으면 다른 이름으로 저장할 때도 암호 필요” ✗</li></ul>
+
+<h3><b>1-3.</b> 파일 형식 (확장자)</h3>
+<table>
+<tr><th>확장자</th><th>의미</th><th>확장자</th><th>의미</th></tr>
+<tr><td><b>xlsx</b></td><td>통합 문서(기본)</td><td><b>xlk</b></td><td>백업 파일</td></tr>
+<tr><td><b>xltx</b></td><td><b>서식 파일</b> (t = 서식)</td><td>xls</td><td>97–2003 통합 문서</td></tr>
+<tr><td><b>xlsm</b></td><td><b>매크로</b> 포함 통합 문서 (m = 매크로)</td><td>xlsb</td><td>바이너리 통합 문서</td></tr>
+<tr><td><b>xltm</b></td><td><b>매크로 포함 서식</b> 파일</td><td>htm / html</td><td>웹 페이지</td></tr>
+<tr><td><b>txt</b></td><td>텍스트(<b>탭</b>으로 분리)</td><td><b>prn</b></td><td>텍스트(<b>공백</b>으로 분리)</td></tr>
+<tr><td><b>csv</b></td><td>텍스트(<b>쉼표</b>로 분리)</td><td></td><td></td></tr>
+</table>
+<ul><li><span class="trap">함정</span>: “xltm = 매크로” ✗ (매크로 <b>서식</b>) · “txt = 공백, prn = 탭” ✗ (반대)</li></ul>
+
+<h3><b>1-4.</b> 워크시트 · 시트 다루기</h3>
+<ul>
+<li>셀 = <b>행(1, 2, 3…)과 열(A, B, C…)이 만나는 곳</b>. 셀 주소 예: D열 6행 → <b>D6</b></li>
+<li>시트 선택: 떨어진 시트 <b>Ctrl</b>+클릭, 연속된 시트 <b>Shift</b>+클릭, 바로 가기 메뉴 → <b>모든 시트 선택</b></li>
+<li>여러 시트를 선택하면 제목 표시줄에 <b>[그룹]</b> 표시 → 이때 입력한 내용은 <b>선택된 모든 시트에 똑같이 입력</b></li>
+<li>시트 이름 바꾸기: <b>더블클릭</b> 또는 바로 가기 메뉴. <b>공백 포함 최대 31자</b>, <b>공백 사용 가능</b>, <code>\ / ? * [ ]</code> 사용 불가</li>
+<li>시트 이동: 시트 탭을 드래그 / 복사: <b>Ctrl</b>+드래그 → “시트명 (2)”처럼 번호가 붙음. 다른 통합 문서로도 이동·복사 가능</li>
+<li>시트 삭제는 <b>실행 취소(Ctrl+Z)로 되살릴 수 없음</b> (내용이 있으면 영구 삭제 경고)</li>
+<li>탭 색: 시트 구분용, <b>꼭 다른 색으로 지정할 필요 없음</b> · 숨기기 / 숨기기 취소 가능</li>
+<li>새 통합 문서의 기본 시트 수는 엑셀 옵션에서 지정(<b>최대 255</b>), 실제 시트 수는 <b>메모리</b>에 따라 제한</li>
+</ul>
+
+<h3><b>1-5.</b> 엑셀 화면 구성</h3>
+<table>
+<tr><th>구성 요소</th><th>설명</th></tr>
+<tr><td><b>빠른 실행 도구 모음</b></td><td>자주 쓰는 명령을 버튼으로 등록. <b>리본 메뉴 위나 아래</b>에 표시 가능. 기타 명령 → 추가</td></tr>
+<tr><td>제목 표시줄</td><td>열려 있는 파일 이름 표시</td></tr>
+<tr><td>리본 메뉴</td><td>탭 더블클릭 또는 <b>Ctrl + F1</b>로 숨기기/표시. [개발 도구] 탭은 파일 → 옵션 → <b>리본 사용자 지정</b>에서 체크</td></tr>
+<tr><td><b>이름 상자</b></td><td>선택한 셀의 <b>주소(이름)</b> 표시</td></tr>
+<tr><td><b>수식 입력줄</b></td><td>셀의 실제 내용·수식 표시, 수정 가능. 확장/축소 <b>Ctrl + Shift + U</b></td></tr>
+<tr><td>행/열 머리글</td><td>1, 2, 3… / A, B, C…</td></tr>
+<tr><td>상태 표시줄</td><td>범위를 선택하면 <b>평균, 개수, 합계</b> 표시</td></tr>
+<tr><td>보기 버튼</td><td><b>기본, 페이지 레이아웃, 페이지 나누기 미리 보기</b> (전체 화면 없음)</td></tr>
+<tr><td>확대/축소</td><td><b>10% ~ 400%</b> (Ctrl + 마우스 휠로도 가능)</td></tr>
+<tr><td><b>채우기 핸들</b></td><td>셀 포인터 오른쪽 아래의 작은 점. 드래그해서 데이터 채우기</td></tr>
+</table>
+
+<div class="point">
+<h3><b>1-6. Part 1</b> 시험 포인트</h3>
+<ul>
+<li>xlk 백업, xltx 서식, xlsm 매크로, xltm 매크로 서식 / txt 탭 · prn 공백 · csv 쉼표</li>
+<li>쓰기 암호: 다른 이름으로 저장은 가능, 읽기 전용 권장은 암호 아님</li>
+<li>시트 이름 31자·공백 가능·<code>\ / ? * [ ]</code> 불가, 시트 삭제는 실행 취소 불가</li>
+<li>Shift+F11 시트 삽입, Ctrl+F1 리본, Ctrl+Shift+U 수식 입력줄, 확대 10~400%</li>
+</ul>
+</div>
+
+<!-- ================= PART 2 ================= -->
+<h2><b>Part 2.</b> 시트 보호 · 데이터 입력</h2>
+
+<h3><b>2-1.</b> 시트 보호 · 통합 문서 보호 ([검토] 탭 → 보호 그룹)</h3>
+<table>
+<tr><th>구분</th><th>시트 보호</th><th>통합 문서 보호</th></tr>
+<tr><td>대상</td><td><b>셀</b>의 내용 입력·수정 제한</td><td><b>시트 구조</b>: 삽입·삭제·이동·복사·숨기기·이름 바꾸기 금지<br>(창 선택 시 창 이동·크기 조정·닫기 금지)</td></tr>
+<tr><td>암호</td><td colspan="2"><b>선택 사항</b> (없어도 보호 가능, 단 누구나 해제 가능)</td></tr>
+</table>
+<ul>
+<li>셀 서식 → [보호] 탭: 새 시트의 모든 셀은 기본으로 <b>잠금 ✓</b>, <b>숨김 ✗</b></li>
+<li>시트 보호가 적용되려면 셀에 <b>잠금</b>이 설정되어 있어야 함 (잠금 해제된 셀은 보호 안 됨)</li>
+<li><b>숨김</b>을 설정하고 시트를 보호하면 <b>수식 입력줄에 수식이 표시되지 않음</b> (값은 보임)</li>
+<li>잠금·숨김 속성은 <b>시트를 보호하기 전까지는 아무 효과 없음</b> · 보호된 셀을 수정하면 경고 메시지</li>
+<li>차트 시트는 차트 내용만 변경 못 하게 보호 가능</li>
+<li><span class="trap">함정</span>: “셀을 보호하려면 먼저 잠금을 해제해야 한다” ✗ · “보호하려면 숨김을 선택해야 한다” ✗ · “암호는 필수” ✗</li>
+</ul>
+
+<h3><b>2-2.</b> 데이터 종류별 입력</h3>
+<table>
+<tr><th>종류</th><th>정렬</th><th>입력 방법·특징</th></tr>
+<tr><td><b>문자</b></td><td>왼쪽</td><td>한글·영문·숫자+문자 조합. 셀보다 길면 옆 셀로 이어서 표시, <b>옆 셀에 내용이 있으면 잘림</b><br>숫자를 문자로 입력: 앞에 <b>작은따옴표(')</b> (예: '002)<br>특수 문자: 한글 자음(ㅁ 등) + <b>한자</b> 키 · 한자: 범위 지정 후 한자 키</td></tr>
+<tr><td><b>숫자</b></td><td>오른쪽</td><td>음수는 앞에 - 또는 괄호. <b>분수는 0 + 공백 + 분수</b> (예: <code>0 2/5</code>)<br>너무 길면 <b>지수 형식</b> 또는 <b>####</b> (열 너비를 넓히면 정상 표시)<br>숫자에 문자나 공백이 섞이면 문자 데이터</td></tr>
+<tr><td><b>날짜</b></td><td>오른쪽</td><td><b>하이픈(-)이나 슬래시(/)</b>로 구분. 날짜는 <b>일련번호</b>(1900-01-01 = 1)<br>연·월만 입력하면 <b>1일</b> 자동 · 연도 두 자리: <b>00~29 → 2000년대, 30~99 → 1900년대</b><br><b>Ctrl + ;</b> 오늘 날짜</td></tr>
+<tr><td><b>시간</b></td><td>오른쪽</td><td><b>콜론(:)</b>으로 구분, 24시간제(AM/PM 표시). 시간은 소수(<b>12:00 = 0.5</b>)<br><b>Ctrl + Shift + ;</b> 현재 시간</td></tr>
+</table>
+<ul>
+<li><b>자동 완성</b>: 같은 열의 문자·문자+숫자 데이터만. <b>숫자·날짜·시간은 자동 완성 안 됨</b></li>
+<li>예: <code>1:30</code>(띄어쓰기 없음)·<code>'1234</code>·<code>1-30 일</code>처럼 형식에 맞지 않으면 텍스트로 인식</li>
+</ul>
+
+<h3><b>2-3.</b> 메모(노트) vs 윗주</h3>
+<table>
+<tr><th>구분</th><th>메모(노트)</th><th>윗주</th></tr>
+<tr><td>삽입</td><td>바로 가기 메뉴 → 새 노트, <b>Shift + F2</b></td><td>[홈] → 글꼴 그룹 → 윗주 필드 표시 / 편집</td></tr>
+<tr><td>대상</td><td>모든 데이터 (숫자·문자)</td><td><b>문자 데이터가 있는 셀만</b></td></tr>
+<tr><td>표시</td><td>셀 오른쪽 위 <b>빨간 삼각형</b>, 마우스를 올리면 표시</td><td>셀 위에 작은 글씨 (<b>윗주 필드 표시</b>를 해야 보임)</td></tr>
+<tr><td>셀 내용 삭제 시</td><td><b>메모는 남음</b> (메모 삭제로 따로 지움)</td><td><b>윗주도 함께 삭제</b></td></tr>
+<tr><td>서식</td><td>글꼴·크기·색 등 변경 가능</td><td><b>전체 단위로만</b> 변경 (일부 글자만 불가)</td></tr>
+</table>
+<ul>
+<li>셀을 이동하면 메모도 함께 이동 · <b>피벗 테이블에서 정렬하면 메모는 함께 이동하지 않음</b></li>
+<li>메모는 기본적으로 인쇄 안 됨 → 페이지 설정 [시트] 탭에서 <b>시트 끝</b> 또는 <b>시트에 표시된 대로</b> 인쇄 가능</li>
+<li><span class="trap">함정</span>: “Delete 키로 셀 내용을 지우면 메모도 삭제” ✗</li>
+</ul>
+
+<h3><b>2-4.</b> 하이퍼링크</h3>
+<ul>
+<li>텍스트·도형·그림·차트에 연결 가능 (<b>양식 컨트롤 단추에는 불가</b>)</li>
+<li>연결 대상: <b>기존 파일/웹 페이지, 현재 문서, 새 문서 만들기, 전자 메일 주소</b> (바로 가기 키 ✗)</li>
+<li>제거: 바로 가기 메뉴 → 링크 제거, 또는 [홈] → 지우기 → 하이퍼링크 제거</li>
+</ul>
+
+<h3><b>2-5.</b> 수정 · 지우기</h3>
+<ul>
+<li>수정: 셀 <b>더블클릭</b>, 수식 입력줄, <b>F2</b></li>
+<li><b>Delete</b> = 내용 지우기 (서식·메모는 남음) · 범위 선택 후 <b>Backspace</b>는 <b>첫 셀만</b> 지워짐</li>
+<li>[홈] → 편집 → 지우기: <b>모두 지우기</b>(내용·서식·메모 전부), 서식 지우기, 내용 지우기, 메모 지우기, 하이퍼링크 제거</li>
+<li>입력 중 <b>Esc</b> = 입력 취소</li>
+</ul>
+
+<h3><b>2-6.</b> 셀 포인터 이동</h3>
+<table>
+<tr><th>키</th><th>이동</th><th>키</th><th>이동</th></tr>
+<tr><td>Enter</td><td>아래</td><td><b>Shift + Enter</b></td><td>위</td></tr>
+<tr><td>Tab</td><td>오른쪽</td><td>Shift + Tab</td><td>왼쪽</td></tr>
+<tr><td><b>Home</b></td><td>같은 행의 <b>A열</b></td><td><b>Ctrl + Home</b></td><td><b>A1</b> 셀</td></tr>
+</table>
+<ul><li>범위를 지정하고 입력하며 Enter를 누르면 범위 안에서만 이동, 끝에 도달하면 <b>처음 셀로 돌아옴</b></li></ul>
+
+<h3><b>2-7.</b> 연속 데이터 채우기 (1~2문제 출제)</h3>
+<table>
+<tr><th>데이터</th><th>그냥 드래그</th><th>Ctrl + 드래그</th></tr>
+<tr><td>숫자 하나</td><td><b>복사</b></td><td><b>1씩 증가</b></td></tr>
+<tr><td>숫자 두 개 선택 (예: 10, 15)</td><td><b>차이만큼 증가</b></td><td>반복 복사</td></tr>
+<tr><td>문자+숫자 (1학년)</td><td>숫자 증가 (숫자가 둘 이상이면 <b>마지막 숫자</b>만 증가)</td><td>복사</td></tr>
+<tr><td>날짜 / 시간</td><td><b>1일</b> 단위 / <b>1시간</b> 단위 증가</td><td>복사</td></tr>
+<tr><td>문자 (가, A)</td><td>복사</td><td>복사</td></tr>
+<tr><td>목록 (월, 월요일)</td><td>월→화→수…, 월·수 두 개 선택 시 하나씩 건너뜀</td><td>복사</td></tr>
+</table>
+<ul>
+<li>날짜를 <b>마우스 오른쪽 버튼으로 드래그</b>: <b>일 · 평일(토·일 제외) · 월 · 연</b> 단위 채우기 (<span class="trap">주 단위 없음</span>)</li>
+<li>[연속 데이터] 대화상자: 방향(행/열), <b>선형 = 더하기, 급수 = 곱하기</b>, 단계 값, 종료 값<br>예: 2에서 급수·단계 2·종료 20 → 2, 4, 8, 16</li>
+<li><b>사용자 지정 목록</b>: 파일 → 옵션 → <b>고급</b> → 사용자 지정 목록 편집. 기본 목록은 삭제 불가, 추가한 목록만 삭제 가능</li>
+</ul>
+
+<div class="point">
+<h3><b>2-8. Part 2</b> 시험 포인트</h3>
+<ul>
+<li>보호는 잠금 속성 필요, 숨김 = 수식 입력줄에 수식 숨김, 암호는 선택</li>
+<li>문자 왼쪽·숫자/날짜/시간 오른쪽, 분수 <code>0 2/5</code>, 숫자를 문자로 = 작은따옴표</li>
+<li>Ctrl+; 날짜, Ctrl+Shift+; 시간, 30~99년 → 1900년대</li>
+<li>메모는 내용 지워도 남음, 윗주는 문자에만·함께 지워짐</li>
+<li>Ctrl+Home = A1, Home = A열, 날짜 오른쪽 드래그는 일·평일·월·연</li>
+<li>Ctrl+드래그: 숫자 하나는 1씩 증가, 나머지는 복사 / 선형 = 더하기, 급수 = 곱하기</li>
+</ul>
+</div>
+
+<!-- ================= PART 3 ================= -->
+<h2><b>Part 3.</b> 셀 편집 · 셀 서식 · 엑셀 옵션</h2>
+
+<h3><b>3-1.</b> 삽입 · 삭제 · 복사 · 이동</h3>
+<ul>
+<li>삽입 <b>Ctrl + +</b>: 셀을 오른쪽으로 밀기 / 아래로 밀기 / 행 전체 / 열 전체</li>
+<li>삭제 <b>Ctrl + -</b>: 셀을 왼쪽으로 밀기 / 위로 밀기 / 행 전체 / 열 전체</li>
+<li>삽입·삭제해도 <b>워크시트 크기(전체 행·열 수)는 변하지 않음</b></li>
+<li>복사 Ctrl+C, 잘라내기 Ctrl+X, 붙여넣기 Ctrl+V → 선택 영역에 <b>움직이는 점선</b> 표시, <b>Esc</b>로 해제</li>
+<li>마우스: 그냥 드래그 = <b>이동</b>, <b>Ctrl</b>+드래그 = <b>복사</b>. 드래그하는 동안은 <b>테두리만</b> 표시</li>
+<li>클립보드에는 <b>최대 24개</b>까지 저장</li>
+<li><span class="trap">함정</span>: “Shift + 드래그 = 복사” ✗ (Ctrl)</li>
+</ul>
+
+<h3><b>3-2.</b> 선택하여 붙여넣기 (<b>Ctrl + Alt + V</b>)</h3>
+<ul>
+<li>붙여넣기: 모두, <b>수식</b>, <b>값</b>, <b>서식</b>(내용은 안 붙음), 메모, 유효성 검사, 원본 테마, <b>테두리만 제외</b>, 열 너비 등</li>
+<li>연산: <b>더하기·빼기·곱하기·나누기</b> (예: 10을 복사 → 범위에 더하기로 붙여넣기)</li>
+<li><b>내용 있는 셀만 붙여넣기</b>: 복사 영역의 빈 셀은 붙여넣을 영역 값을 바꾸지 않음</li>
+<li><b>행/열 바꿈</b>: 행과 열을 바꿔서 붙여넣기 · 연결하여 붙여넣기 가능</li>
+<li><b>잘라내기</b> 상태에서는 선택하여 붙여넣기 사용 불가</li>
+<li><span class="trap">함정</span>: “테두리만 붙여넣기” 옵션은 없음 · “서식을 선택하면 내용과 서식을 함께 붙여넣음” ✗</li>
+</ul>
+
+<h3><b>3-3.</b> 표시 형식 범주 (셀 서식 <b>Ctrl + 1</b>)</h3>
+<table>
+<tr><th>범주</th><th>특징</th></tr>
+<tr><td>일반</td><td><b>특정 서식 없음</b>. 셀보다 긴 소수는 너비에 맞춰 반올림</td></tr>
+<tr><td>숫자</td><td>소수 자릿수, 천 단위 구분 기호, <b>음수 표시(빨간색·괄호)</b></td></tr>
+<tr><td><b>통화</b></td><td>통화 기호가 <b>숫자 바로 앞</b>, <b>음수 표시 형식 지정 가능</b></td></tr>
+<tr><td><b>회계</b></td><td>통화 기호가 <b>셀 왼쪽 끝</b>, <b>음수 표시 형식 지정 불가</b>, 0은 <b>-</b>로 표시</td></tr>
+<tr><td>백분율</td><td>값 × 100 후 % 표시 (1 → 100%)</td></tr>
+<tr><td>기타</td><td>우편번호, 전화번호, 주민등록번호 등</td></tr>
+</table>
+
+<h3><b>3-4.</b> 사용자 지정 서식 코드 (반드시 출제)</h3>
+<table>
+<tr><th>코드</th><th>의미</th><th>예 (입력 → 결과)</th></tr>
+<tr><td><b>#</b></td><td>유효한 숫자만 표시, <b>의미 없는 0은 표시 안 함</b></td><td><code>#.#</code>: 12.456 → 12.5</td></tr>
+<tr><td><b>0</b></td><td><b>의미 없는 0도 표시</b>해 자릿수 맞춤</td><td><code>000.00</code>: 12.456 → 012.46 · <code>#.0</code>: 5 → 5.0</td></tr>
+<tr><td><b>?</b></td><td>의미 없는 0 자리에 <b>공백</b> → 소수점 정렬, 분수 표시</td><td><code>?/?</code>: 0.5 → 1/2</td></tr>
+<tr><td><b>,</b> (쉼표)</td><td>천 단위 구분. <b>맨 뒤 쉼표 1개 = 천 단위 생략, 2개 = 백만 단위 생략</b> (반올림)</td><td><code>#,##0,</code>: 1234567 → 1,235</td></tr>
+<tr><td>%</td><td>× 100 후 % 표시</td><td><code>#%</code>: 0.5 → 50%</td></tr>
+<tr><td><b>@</b></td><td>입력한 <b>문자</b> 자리 (뒤·앞에 글자 붙이기)</td><td><code>@"님"</code>: 김샘 → 김샘님</td></tr>
+<tr><td><b>*</b></td><td>뒤의 문자를 <b>셀 너비만큼 반복</b></td><td><code>*★#,##0</code></td></tr>
+<tr><td>"문자"</td><td>큰따옴표 안의 문자 그대로 표시</td><td><code>#,##0"원"</code></td></tr>
+</table>
+<ul><li>반올림 주의: 생략·잘리는 자리의 첫 숫자가 <b>5 이상이면 올림</b></li></ul>
+
+<h3><b>3-5.</b> 날짜 · 시간 서식 코드</h3>
+<table>
+<tr><th>코드</th><th>결과</th><th>코드</th><th>결과</th></tr>
+<tr><td>yy / <b>yyyy</b></td><td>25 / 2025</td><td>d / <b>dd</b></td><td>5 / 05</td></tr>
+<tr><td>m / <b>mm</b></td><td>3 / 03</td><td><b>ddd</b></td><td>Mon (영문 요일 3글자)</td></tr>
+<tr><td><b>mmm</b></td><td>Mar (영문 월 3글자)</td><td><b>dddd</b></td><td>Monday (영문 요일 전체)</td></tr>
+<tr><td><b>mmmm</b></td><td>March (영문 월 전체)</td><td><b>aaa</b> / <b>aaaa</b></td><td>월 / 월요일 (한글 요일)</td></tr>
+<tr><td>h / hh, m / mm, s / ss</td><td>시·분·초 (두 개면 앞에 0 채움)</td><td>AM/PM</td><td>오전·오후 표시</td></tr>
+</table>
+<ul><li><span class="trap">함정</span>: “dddd = Sun” ✗ (Sunday, 전체 이름)</li></ul>
+
+<h3><b>3-6.</b> 사용자 지정 서식의 구역</h3>
+<ul>
+<li>최대 <b>4개 구역</b>, <b>세미콜론(;)</b>으로 구분: <b>양수 ; 음수 ; 0 ; 텍스트</b></li>
+<li>조건·색은 <b>대괄호</b>로: 예 <code>[파랑]#,##0;[빨강]-#,##0;0;@"님"</code></li>
+<li><code>;;;</code> = 셀 내용 숨기기</li>
+</ul>
+
+<h3><b>3-7.</b> 맞춤 · 입력 단축키</h3>
+<table>
+<tr><th>기능 / 키</th><th>설명</th></tr>
+<tr><td>셀에 맞춤</td><td>글자 크기를 줄여 셀 너비에 맞춤</td></tr>
+<tr><td>자동 줄 바꿈</td><td>셀 너비에 맞춰 자동으로 줄 바꿈</td></tr>
+<tr><td>셀 병합</td><td>여러 셀을 하나로 합침</td></tr>
+<tr><td><b>Alt + Enter</b></td><td>셀 안에서 <b>강제 줄 바꿈</b></td></tr>
+<tr><td><b>Ctrl + Enter</b></td><td>선택한 <b>여러 셀에 같은 값</b> 한 번에 입력 (떨어진 셀도 가능)</td></tr>
+<tr><td>Shift + Enter</td><td>위쪽 셀로 이동</td></tr>
+<tr><td><b>Ctrl + D</b></td><td>위 셀 내용을 아래로 복사 (Down)</td></tr>
+<tr><td><b>Ctrl + R</b></td><td>왼쪽 셀 내용을 오른쪽으로 복사 (Right)</td></tr>
+<tr><td>Scroll Lock</td><td>켜고 방향키를 누르면 셀 포인터는 고정, 화면만 이동</td></tr>
+</table>
+<ul><li><span class="trap">함정</span>: “Alt + Enter = 여러 셀에 같은 값” ✗ · “Shift + Enter = 여러 셀 동시 입력” ✗ (둘 다 Ctrl + Enter)</li></ul>
+
+<h3><b>3-8.</b> 엑셀 옵션 (파일 → 옵션)</h3>
+<table>
+<tr><th>탭</th><th>설정 내용</th></tr>
+<tr><td><b>일반</b></td><td>기본 글꼴·크기, <b>새 통합 문서의 시트 수</b>, 기본 보기, 사용자 이름, 테마</td></tr>
+<tr><td>언어 교정</td><td><b>자동 고침 옵션</b> (첫 글자 대문자, 요일 대문자, 오타 자동 수정)</td></tr>
+<tr><td><b>저장</b></td><td><b>자동 복구 정보 저장 간격 1~120분</b></td></tr>
+<tr><td><b>고급</b></td><td>Enter 키 이동 방향, <b>소수점 자동 삽입</b>, 메모 표시 방법, 행/열 머리글·눈금선 표시, 눈금선 색, 사용자 지정 목록 편집</td></tr>
+<tr><td>리본 사용자 지정 / 빠른 실행 도구 모음</td><td>[개발 도구] 탭 표시, 자주 쓰는 명령 추가</td></tr>
+</table>
+<ul>
+<li><b>소수점 자동 삽입</b>: 소수점 위치 2 → 3 입력 시 0.03, 50 → 0.5 / 위치 3 → 5 입력 시 <b>0.005</b></li>
+<li><span class="trap">함정</span>: “Tab 키를 누르면 다음 시트로 이동하도록 설정” — 옵션에 없음</li>
+</ul>
+
+<div class="point">
+<h3><b>3-9. Part 3</b> 시험 포인트</h3>
+<ul>
+<li>Ctrl+드래그 = 복사, 클립보드 24개, Ctrl+Alt+V 선택하여 붙여넣기, 테두리만 붙여넣기 없음</li>
+<li>통화 = 기호가 숫자 앞·음수 지정 가능 / 회계 = 왼쪽 끝·음수 지정 불가</li>
+<li># 0 생략, 0 채움, ? 공백 / 쉼표 1개 천 단위 생략(반올림)</li>
+<li>mmm Mar, mmmm March, ddd Mon, dddd Monday, aaaa 월요일</li>
+<li>구역: 양수;음수;0;텍스트 · 조건과 색은 대괄호</li>
+<li>Alt+Enter 줄 바꿈, Ctrl+Enter 동시 입력, Ctrl+D 아래, Ctrl+R 오른쪽</li>
+<li>옵션: 시트 수 = 일반, 자동 저장 1~120분 = 저장, 소수점 자동 삽입·눈금선 = 고급</li>
+</ul>
+</div>
+
+<!-- ================= SUMMARY ================= -->
+<h2>전체 요약표</h2>
+<table>
+<tr><th>주제</th><th>핵심 키·내용</th><th>함정</th></tr>
+<tr><td>파일 형식</td><td>xlk 백업, xltx 서식, xlsm 매크로, xltm 매크로 서식</td><td>txt 탭 · prn 공백 · csv 쉼표</td></tr>
+<tr><td>일반 옵션</td><td>열기 암호 / 쓰기 암호 / 읽기 전용 권장</td><td>다른 이름 저장엔 쓰기 암호 불필요</td></tr>
+<tr><td>시트</td><td>이름 31자, Shift+F11 삽입, [그룹] 동시 입력</td><td>시트 삭제 실행 취소 불가</td></tr>
+<tr><td>화면</td><td>빠른 실행 도구 모음, 이름 상자, 확대 10~400%</td><td>보기에 전체 화면 없음</td></tr>
+<tr><td>시트 보호</td><td>잠금 속성 필요, 숨김 = 수식 숨김, 암호 선택</td><td>잠금 해제 후 보호 ✗</td></tr>
+<tr><td>통합 문서 보호</td><td>시트 삽입·삭제·이동·이름 변경 금지</td><td>—</td></tr>
+<tr><td>데이터 입력</td><td>분수 0 2/5, '002, Ctrl+; / Ctrl+Shift+;</td><td>숫자·날짜는 자동 완성 안 됨</td></tr>
+<tr><td>메모 / 윗주</td><td>Shift+F2 / 문자만</td><td>Delete로 메모 안 지워짐</td></tr>
+<tr><td>하이퍼링크</td><td>파일·웹, 현재 문서, 새 문서, 전자 메일</td><td>단추에는 불가</td></tr>
+<tr><td>이동 키</td><td>Ctrl+Home A1, Home A열</td><td>Home은 C1이 아니라 A열</td></tr>
+<tr><td>채우기</td><td>Ctrl+드래그 숫자 1씩 증가, 선형 더하기·급수 곱하기</td><td>날짜 주 단위 없음</td></tr>
+<tr><td>편집</td><td>Ctrl+ +/- 삽입·삭제, Ctrl+드래그 복사, 클립보드 24</td><td>Shift+드래그 복사 ✗</td></tr>
+<tr><td>선택하여 붙여넣기</td><td>Ctrl+Alt+V, 값·서식·연산·행/열 바꿈</td><td>테두리만 붙여넣기 없음</td></tr>
+<tr><td>통화 / 회계</td><td>숫자 앞·음수 가능 / 왼쪽 끝·음수 불가</td><td>설명 뒤바꾸기</td></tr>
+<tr><td>서식 코드</td><td># · 0 · ? · , · @ · *</td><td>반올림, 쉼표 생략</td></tr>
+<tr><td>날짜 코드</td><td>mmmm March, dddd Monday, aaaa 월요일</td><td>dddd = Sun ✗</td></tr>
+<tr><td>입력 키</td><td>Alt+Enter 줄 바꿈, Ctrl+Enter 동시 입력, Ctrl+D·R</td><td>Alt+Enter 동시 입력 ✗</td></tr>
+<tr><td>엑셀 옵션</td><td>일반 시트 수, 저장 1~120분, 고급 소수점·눈금선</td><td>—</td></tr>
+</table>
+
+<p class="note">※ 강의에서 일부 단축키를 잘못 말한 부분은 바로잡았습니다. (시트 삽입 Shift+F11, 셀 수정 F2, 열기 Ctrl+O)</p>
+<p class="foot">이 자료는 학습 보조용 요약입니다. 시험 출제 범위와 세부 기능은 교재와 기출문제로 함께 확인하세요.</p>
+
+</body>
+</html>

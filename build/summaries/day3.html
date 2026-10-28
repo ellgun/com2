@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>컴활2급 3일차 핵심정리</title>
+<style>
+  @page { size: A4; margin: 18mm 17mm; }
+  body { font-family: "Malgun Gothic", "맑은 고딕", sans-serif; font-size: 10.5pt; line-height: 1.6; color: #222; }
+  h1 { text-align: center; color: #2f5496; font-size: 20pt; font-weight: normal; margin: 30px 0 6px; }
+  .sub { text-align: center; color: #2f5496; font-size: 13pt; margin-bottom: 18px; }
+  .src { margin: 0 30px 26px; font-size: 10pt; }
+  h2 { color: #4472c4; font-size: 15pt; font-weight: normal; margin: 30px 0 8px; page-break-after: avoid; }
+  h2 b { font-weight: bold; }
+  h3 { color: #4472c4; font-size: 12pt; font-weight: normal; margin: 18px 0 4px; page-break-after: avoid; }
+  h3 b { font-weight: bold; }
+  ul { margin: 4px 0 6px; padding-left: 26px; }
+  li { margin: 2px 0; }
+  table { border-collapse: collapse; width: 100%; margin: 6px 0 8px; font-size: 10pt; page-break-inside: avoid; }
+  th { text-align: left; font-weight: normal; border-bottom: 1px solid #000; padding: 3px 6px; }
+  td { padding: 3px 6px; vertical-align: top; }
+  .trap { color: #c00000; font-weight: bold; }
+  .point { border-bottom: 3px double #555; padding-bottom: 6px; margin-bottom: 10px; }
+  .foot { font-style: italic; margin-top: 30px; font-size: 10pt; }
+  .note { font-size: 9.5pt; color: #555; }
+</style>
+</head>
+<body>
+
+<h1>컴퓨터 활용능력 2급 필기 — 3일차 핵심 정리</h1>
+<div class="sub">컴퓨터 일반: 컴퓨터 분류 · 자료 표현 · 중앙처리장치 · 기억장치 · 입출력장치</div>
+<p class="src">출처: Lilys AI(Readray)로 분석한 강의 3편 (3일차 1·2·3). 강의 내용을 요약·재구성했으며, 강의 중 사실과 다른 설명은 바로잡고 표시해 두었습니다.</p>
+
+<!-- ================= PART 1 ================= -->
+<h2><b>Part 1.</b> 컴퓨터 분류 · 발전 과정 · 자료 표현</h2>
+
+<h3><b>1-1.</b> 컴퓨터 분류 (세 가지 기준을 섞어 출제)</h3>
+<table>
+<tr><th>기준</th><th>종류</th><th>설명</th></tr>
+<tr><td>사용 목적</td><td>전용 / 범용</td><td>전용: 항공·의료·군사·기상 등 특정 분야용<br>범용(다목적): 사무·통계·그래픽·게임 등 여러 분야용 (개인용 PC)</td></tr>
+<tr><td>취급 데이터</td><td>아날로그 / 디지털 / 하이브리드</td><td>가장 많이 출제. 하이브리드 = 아날로그 + 디지털 혼합</td></tr>
+<tr><td>처리 능력</td><td>슈퍼 · 메인프레임 · 미니 · 워크스테이션 · 마이크로</td><td>“데이터 형태에 따른 분류가 아닌 것”에 <b>슈퍼컴퓨터</b>가 보기로 나옴</td></tr>
+</table>
+
+<h3><b>1-2.</b> 아날로그 vs 디지털 (암기법: <b>“아증”</b> = 아날로그는 증폭 회로)</h3>
+<table>
+<tr><th>구분</th><th>아날로그 컴퓨터</th><th>디지털 컴퓨터</th></tr>
+<tr><td>회로</td><td><b>증폭 회로</b></td><td><b>논리 회로</b></td></tr>
+<tr><td>입력 데이터</td><td>전류·전압·온도 등 연속적인 값</td><td>문자·숫자·부호 (0과 1)</td></tr>
+<tr><td>연산</td><td>미분·적분, 곡선·그래프</td><td>산술·논리 연산 (사칙연산)</td></tr>
+<tr><td>속도</td><td>빠름</td><td>상대적으로 느림</td></tr>
+<tr><td>용도</td><td>특수 목적</td><td>범용</td></tr>
+</table>
+<ul><li>한쪽(아날로그 = 증폭·빠름·특수)만 외우면 나머지는 디지털로 판단할 수 있습니다.</li></ul>
+
+<h3><b>1-3.</b> 처리 능력에 따른 분류</h3>
+<table>
+<tr><th>종류</th><th>특징</th></tr>
+<tr><td>슈퍼 컴퓨터</td><td>높은 정밀도의 고도 계산. 우주항공·기상 예측·시뮬레이션</td></tr>
+<tr><td>메인프레임</td><td>대량 데이터를 고속 처리하는 대형 컴퓨터. 공공기관·은행·대기업</td></tr>
+<tr><td>미니 컴퓨터</td><td>메인프레임보다 작음. 중소기업·교육기관·연구소</td></tr>
+<tr><td>워크스테이션</td><td>고성능 데이터 처리, 웹 서버용. <b>RISC 프로세서 사용</b> (단독 출제됨)</td></tr>
+<tr><td>마이크로 컴퓨터</td><td>개인용 PC</td></tr>
+</table>
+<ul>
+<li>크기 순서 (작은 것 → 큰 것): <b>팜톱 → 노트북 → 랩톱 → 데스크톱</b></li>
+<li><b>웨어러블 컴퓨터</b>: 몸이나 옷에 착용하는 작고 가벼운 컴퓨터. 음성·동작 인식, 장소 제약 없이 사용</li>
+</ul>
+
+<h3><b>1-4.</b> 컴퓨터 발전 과정</h3>
+<table>
+<tr><th>구분</th><th>이름</th><th>핵심</th></tr>
+<tr><td rowspan="4">기계식</td><td>파스칼 계산기</td><td>덧셈·뺄셈 (최근 출제)</td></tr>
+<tr><td>라이프니츠 계산기</td><td>사칙연산 (곱셈·나눗셈까지)</td></tr>
+<tr><td>천공 카드 시스템</td><td>홀러리스가 개발, 일괄 처리의 시초</td></tr>
+<tr><td>MARK-I</td><td>최초의 기계식 자동 계산기</td></tr>
+<tr><td rowspan="4">전자식</td><td>ENIAC (에니악)</td><td>최초의 전자 계산기</td></tr>
+<tr><td>EDSAC (에드삭)</td><td>최초로 프로그램 내장 방식 사용</td></tr>
+<tr><td>UNIVAC-I (유니박)</td><td>최초의 상업용 계산기</td></tr>
+<tr><td>EDVAC (에드박)</td><td>프로그램 내장 방식 + 이진법 채택</td></tr>
+</table>
+<ul><li>프로그램 내장 방식 개발자: <b>폰 노이만</b> · 순서: 에니악 → 에드삭 → 유니박 → 에드박</li></ul>
+
+<h3><b>1-5.</b> 세대별 특징 (주요 소자는 반드시 암기)</h3>
+<table>
+<tr><th>세대</th><th>주요 소자</th><th>특징</th></tr>
+<tr><td>1세대</td><td>진공관</td><td>기계어·어셈블리어, <b>일괄 처리</b></td></tr>
+<tr><td>2세대</td><td>트랜지스터</td><td>고급 언어 등장, <b>온라인 실시간 처리</b></td></tr>
+<tr><td>3세대</td><td>집적회로(IC)</td><td>OCR·OMR·MICR 등장, <b>시분할 처리</b></td></tr>
+<tr><td>4세대</td><td>고밀도 집적회로(LSI)</td><td>개인용 컴퓨터, 마이크로프로세서, <b>분산 처리</b></td></tr>
+<tr><td>5세대</td><td>초고밀도 집적회로(VLSI)</td><td><b>퍼지 이론, 인공지능, 패턴 인식</b></td></tr>
+</table>
+<ul><li><span class="trap">함정</span>: “5세대 특징이 아닌 것” → 집적회로 사용(3세대)</li></ul>
+
+<h3><b>1-6.</b> 컴퓨터 단위</h3>
+<table>
+<tr><th>처리 속도 (느림 → 빠름)</th><th>저장 용량 (작음 → 큼)</th></tr>
+<tr><td>ms(10<sup>-3</sup>) → μs(10<sup>-6</sup>) → ns(10<sup>-9</sup>) → ps(10<sup>-12</sup>) → fs(10<sup>-15</sup>) → as(10<sup>-18</sup>)<br>밀리 → 마이크로 → 나노 → 피코 → 펨토 → 아토</td>
+<td>B → KB(2<sup>10</sup>) → MB(2<sup>20</sup>) → GB(2<sup>30</sup>) → TB(2<sup>40</sup>) → PB(2<sup>50</sup>) → EB(2<sup>60</sup>)</td></tr>
+</table>
+<ul>
+<li>1KB = 1,024B · <b>1GB = 1024 × 1024 × 1024 바이트</b> (기출)</li>
+<li>하드웨어 업그레이드 시 <b>수치가 작을수록 좋은 것 = RAM 접근 속도</b> (CPU 클럭·HDD 용량·모뎀 전송 속도는 클수록 좋음)</li>
+</ul>
+
+<h3><b>1-7.</b> 자료 구성 단위</h3>
+<table>
+<tr><th>구분</th><th>단위</th><th>설명</th></tr>
+<tr><td rowspan="4">물리적</td><td>비트(Bit)</td><td>정보 표현의 <b>최소 단위</b> (0 또는 1)</td></tr>
+<tr><td>니블(Nibble)</td><td><b>4비트</b> → 16가지 표현</td></tr>
+<tr><td>바이트(Byte)</td><td>8비트, <b>문자 표현의 기본 단위</b>, 256가지 표현. 영문·숫자 1바이트, 한글·한자 2바이트</td></tr>
+<tr><td>워드(Word)</td><td><b>CPU가 한 번에 처리하는 명령 단위</b>. 하프워드 2B · 풀워드 4B · 더블워드 8B</td></tr>
+<tr><td rowspan="4">논리적</td><td>필드(Field)</td><td>파일 구성의 최소 단위, 항목(Item). DB의 <b>열</b></td></tr>
+<tr><td>레코드(Record)</td><td>필드의 모임, 자료 처리 단위. DB의 <b>행</b></td></tr>
+<tr><td>파일(File)</td><td>레코드의 모임</td></tr>
+<tr><td>데이터베이스</td><td>관련 파일의 모임</td></tr>
+</table>
+<ul>
+<li>크기 순서: 비트 → 니블 → 바이트 → 워드 → 필드 → 레코드 → 파일 → 데이터베이스</li>
+<li><span class="trap">함정</span>: “니블은 8비트” ✗ (4비트) · “바이트는 명령 처리 기본 단위” ✗ (워드)</li>
+</ul>
+
+<h3><b>1-8.</b> 진수 변환 (가끔 출제)</h3>
+<ul>
+<li>2진수 → 8진수: 오른쪽부터 <b>3자리씩</b> 끊어 계산 · 2진수 → 16진수: <b>4자리씩</b> 끊어 계산</li>
+<li>자리가 모자라면 앞에 0을 채움 · <b>2⁰ = 8⁰ = 16⁰ = 1</b> (0이 아님)</li>
+<li>예) 101<sub>(2)</sub> = 1×4 + 0×2 + 1×1 = <b>5<sub>(8)</sub></b></li>
+<li>예) 1001011<sub>(2)</sub> → 001 | 001 | 011 → <b>113<sub>(8)</sub></b> · 16진수: 0100 | 1011 → <b>4B<sub>(16)</sub></b></li>
+</ul>
+
+<h3><b>1-9.</b> 문자 표현 코드 (비트 수 반드시 암기)</h3>
+<table>
+<tr><th>코드</th><th>구성</th><th>표현 수</th><th>특징</th></tr>
+<tr><td>BCD</td><td>6비트 (존 2 + 디지트 4)</td><td>64</td><td>가장 기본 코드. 영문 소문자 표현 불가</td></tr>
+<tr><td>ASCII</td><td>7비트 (존 3 + 디지트 4)</td><td>128</td><td><b>개인용 PC·정보 통신용</b>, 대소문자 표현, 이메일 표준 (가장 많이 출제)</td></tr>
+<tr><td>확장 ASCII</td><td>8비트 (존 4 + 디지트 4)</td><td>256</td><td>“확장”이 붙으면 8비트</td></tr>
+<tr><td>EBCDIC</td><td>8비트 (존 4 + 디지트 4)</td><td>256</td><td>확장 2진화 10진 코드, <b>대형 컴퓨터 범용 코드</b></td></tr>
+<tr><td>유니코드</td><td>16비트</td><td><b>65,536</b></td><td>국제 표준, 전 세계 문자 표현 (“6 5 5 3 6”으로 암기)</td></tr>
+</table>
+<ul>
+<li>존 비트 = 문자 그룹(숫자·대문자·소문자 등), 디지트 비트 = 그룹 안에서 몇 번째 문자인지</li>
+<li><span class="trap">함정</span>: “ASCII는 대형 컴퓨터 범용 코드” ✗ (EBCDIC) · “확장 ASCII는 멀티미디어 표현에 적합” ✗</li>
+</ul>
+
+<h3><b>1-10.</b> 오류 검출 코드</h3>
+<table>
+<tr><th>코드</th><th>기능</th></tr>
+<tr><td>패리티 비트</td><td>에러 <b>검출만</b> 가능 (교정 불가). 짝수 패리티 / 홀수 패리티</td></tr>
+<tr><td>해밍 코드</td><td>에러 <b>검출 + 교정</b> 가능. 2비트 에러 검출, 1비트 에러 교정</td></tr>
+</table>
+
+<div class="point">
+<h3><b>1-11. Part 1</b> 시험 포인트</h3>
+<ul>
+<li>취급 데이터 분류 = 아날로그·디지털·하이브리드 (슈퍼컴퓨터는 처리 능력 분류)</li>
+<li>아날로그 = 증폭 회로·미적분·빠름·특수 목적 / 디지털 = 논리 회로·산술 연산·범용</li>
+<li>워크스테이션 = RISC, 5세대 = 퍼지·AI·패턴 인식</li>
+<li>비트 = 최소 단위, 니블 = 4비트, 바이트 = 문자 단위, 워드 = CPU 명령 단위</li>
+<li>BCD 6 · ASCII 7 · EBCDIC 8 · 유니코드 16비트, 해밍 코드만 교정 가능</li>
+</ul>
+</div>
+
+<!-- ================= PART 2 ================= -->
+<h2><b>Part 2.</b> 중앙처리장치(CPU) · 주기억장치</h2>
+
+<h3><b>2-1.</b> CPU 구성</h3>
+<ul>
+<li>CPU(Central Processing Unit): 명령어 해석, 연산, 입출력 제어 등 컴퓨터의 모든 동작을 총괄</li>
+<li>구성: <b>제어 장치 + 연산 장치 + 레지스터</b> (SSD는 보조기억장치이므로 CPU 구성 요소 아님)</li>
+<li><b>레지스터</b>: CPU 안의 임시 기억 장소, <b>가장 빠른 메모리</b></li>
+<li>접근 속도: <b>레지스터 > 캐시 메모리 > 주기억장치 > 보조기억장치</b></li>
+</ul>
+
+<table>
+<tr><th>장치</th><th>구성 요소</th><th>역할</th></tr>
+<tr><td rowspan="4">제어 장치<br>(CU)</td><td><b>프로그램 카운터(PC)</b></td><td><b>다음에 실행할</b> 명령어의 주소 기억</td></tr>
+<tr><td><b>명령 레지스터(IR)</b></td><td><b>현재 실행 중인</b> 명령어 저장</td></tr>
+<tr><td>명령 해독기(Decoder)</td><td>명령어 해독, 실행 동작 결정</td></tr>
+<tr><td>MAR / MBR</td><td>접근할 메모리 주소 저장 / 메모리에서 읽거나 쓸 데이터 임시 보관</td></tr>
+<tr><td rowspan="3">연산 장치<br>(ALU)</td><td><b>누산기(AC)</b></td><td><b>연산 결과를 임시 저장</b> (가장 많이 출제)</td></tr>
+<tr><td>가산기 · 보수기</td><td>덧셈 / 뺄셈을 위한 보수 처리</td></tr>
+<tr><td>상태 레지스터 · 범용 레지스터</td><td>연산 상태 표시 / 여러 목적의 임시 저장</td></tr>
+</table>
+<ul>
+<li>CPU 성능 단위: <b>MIPS</b> = 1초당 100만 개의 명령 처리</li>
+<li><span class="trap">함정</span>: “레지스터는 주기억장치보다 느리다” ✗ (가장 빠름)</li>
+</ul>
+
+<h3><b>2-2.</b> 마이크로프로세서: CISC vs RISC (아주 자주 출제)</h3>
+<ul><li>마이크로프로세서 = 제어 장치 + 연산 장치를 하나의 반도체 칩에 내장한 CPU</li></ul>
+<table>
+<tr><th>구분</th><th>CISC (Complex)</th><th>RISC (Reduced)</th></tr>
+<tr><td>명령어</td><td>많고 복잡</td><td>적고 단순</td></tr>
+<tr><td>프로그래밍</td><td><b>간단</b></td><td><b>복잡</b></td></tr>
+<tr><td>처리 속도</td><td>느림</td><td><b>빠름</b></td></tr>
+<tr><td>전력 소모</td><td>많음</td><td>적음</td></tr>
+<tr><td>사용처</td><td>일반 PC (인텔 계열)</td><td><b>워크스테이션</b>, 그래픽용, 스마트폰</td></tr>
+</table>
+<ul><li>암기: <b>RISC는 “프로그램은 복잡한 대신 처리는 빠르다”</b> / CISC는 반대</li></ul>
+
+<h3><b>2-3.</b> 버스 (Bus)</h3>
+<ul>
+<li>CPU·메모리·입출력 장치 사이에 정보를 전달하는 통로</li>
+<li>종류: <b>데이터 버스</b>(정보 전달), <b>주소 버스</b>(위치 전달), <b>제어 버스</b>(명령·신호 전달) — “프로그램 버스”는 없음</li>
+</ul>
+
+<h3><b>2-4.</b> 주기억장치: ROM vs RAM</h3>
+<table>
+<tr><th>구분</th><th>ROM</th><th>RAM</th></tr>
+<tr><td>읽기/쓰기</td><td>읽기 전용</td><td>읽기·쓰기 모두 가능</td></tr>
+<tr><td>전원 차단 시</td><td>유지 (<b>비휘발성</b>)</td><td>사라짐 (<b>휘발성</b>)</td></tr>
+<tr><td>저장 내용</td><td><b>BIOS</b>, POST, 글자 폰트, 자가진단 프로그램</td><td>현재 실행 중인 프로그램과 데이터</td></tr>
+</table>
+
+<table>
+<tr><th>ROM 종류</th><th>특징</th></tr>
+<tr><td>Mask ROM</td><td>제조 과정에서 내용 기록, 수정 불가</td></tr>
+<tr><td>PROM</td><td><b>한 번만</b> 기록 가능</td></tr>
+<tr><td>EPROM</td><td><b>자외선</b>으로 여러 번 수정 가능</td></tr>
+<tr><td>EEPROM</td><td><b>전기적인 방법</b>으로 여러 번 수정 가능</td></tr>
+</table>
+
+<table>
+<tr><th>RAM 종류</th><th>SRAM (정적 램)</th><th>DRAM (동적 램)</th></tr>
+<tr><td>재충전</td><td>필요 없음</td><td><b>필요</b></td></tr>
+<tr><td>속도</td><td>빠름</td><td>느림</td></tr>
+<tr><td>회로 / 가격</td><td>복잡 / 비쌈</td><td>간단 / 저렴</td></tr>
+<tr><td>전력 소모</td><td>많음</td><td>적음</td></tr>
+<tr><td>용도</td><td><b>캐시 메모리</b></td><td><b>일반 주기억장치</b></td></tr>
+</table>
+
+<h3><b>2-5.</b> 펌웨어 · BIOS</h3>
+<ul>
+<li><b>펌웨어</b>: ROM에 기록되어 하드웨어를 제어하며, 성능 향상을 위해 업그레이드할 수 있는 마이크로프로그램의 집합 (= 롬 바이오스)</li>
+<li><b>BIOS</b>: 기본 입출력 장치·메모리 등 하드웨어 작동에 필요한 명령을 모은 프로그램. 부팅 시 <b>POST</b>(자체 점검)로 장치를 점검·초기화. 칩 교환 없이 업그레이드 가능</li>
+<li><span class="trap">함정</span>: “BIOS는 RAM에 저장” ✗ (ROM) · 프리웨어·셰어웨어·미들웨어는 소프트웨어 용어</li>
+</ul>
+
+<h3><b>2-6.</b> 기타 메모리 (매 시험 1문제 가능)</h3>
+<table>
+<tr><th>메모리</th><th>핵심 키워드</th></tr>
+<tr><td>캐시 메모리</td><td><b>CPU ↔ 주기억장치</b> 속도 차이 개선. SRAM 사용, 비쌈</td></tr>
+<tr><td>가상 메모리</td><td>보조기억장치 일부를 주기억장치처럼 사용 → <b>주기억장치보다 큰 프로그램 실행</b></td></tr>
+<tr><td>버퍼 메모리</td><td><b>CPU ↔ 주변 장치</b> 속도 차이 해결용 임시 메모리</td></tr>
+<tr><td>연관(연상) 메모리</td><td>주소가 아닌 <b>기억된 내용</b>으로 데이터에 직접 접근</td></tr>
+<tr><td>플래시 메모리</td><td>EEPROM을 개선한 비휘발성 메모리. 소형·충격에 강함. USB·SD카드·SSD·MP3·디지털카메라·휴대폰</td></tr>
+</table>
+
+<h3><b>2-7.</b> 관련 용어</h3>
+<table>
+<tr><th>용어</th><th>설명</th></tr>
+<tr><td>DMA</td><td>CPU 간섭 없이 주기억장치와 입출력 장치 사이에서 직접 데이터 전송 → 고속 대량 전송</td></tr>
+<tr><td>교착 상태 (Deadlock)</td><td>서로 다른 프로세스가 상대가 차지한 자원을 무한정 기다려 진행이 중단된 상태</td></tr>
+<tr><td>인터럽트</td><td>실행 중 응급 상황 발생 시 프로그램을 중지하고 처리한 뒤, 중지 시점부터 다시 실행</td></tr>
+<tr><td>IRQ</td><td>하드웨어 장치가 CPU에 인터럽트 처리를 요청하는 신호</td></tr>
+</table>
+<ul>
+<li>인터럽트 종류: <b>외부</b>(정전·기계 착오·입출력 장치) / <b>내부 = 트랩</b>(잘못된 명령·데이터) / 소프트웨어</li>
+<li><span class="trap">함정</span>: “외부 인터럽트는 불법적인 명령이나 데이터로 발생” ✗ (내부 인터럽트)</li>
+</ul>
+
+<div class="point">
+<h3><b>2-8. Part 2</b> 시험 포인트</h3>
+<ul>
+<li>PC = 다음 명령 주소, IR = 현재 명령, 누산기 = 연산 결과 임시 저장</li>
+<li>RISC = 명령어 적음·프로그래밍 복잡·빠름·워크스테이션</li>
+<li>ROM 비휘발성(BIOS) / RAM 휘발성, SRAM = 캐시·재충전 불필요 / DRAM = 주기억·재충전 필요</li>
+<li>캐시(CPU↔주기억), 버퍼(CPU↔주변장치), 가상(큰 프로그램), 연관(기억된 내용)</li>
+<li>내부 인터럽트 = 트랩</li>
+</ul>
+</div>
+
+<!-- ================= PART 3 ================= -->
+<h2><b>Part 3.</b> 보조기억장치 · 입출력장치</h2>
+
+<h3><b>3-1.</b> HDD vs SSD (비교 문제 자주 출제)</h3>
+<table>
+<tr><th>구분</th><th>HDD</th><th>SSD</th></tr>
+<tr><td>저장 방식</td><td>자기 디스크 (트랙·섹터)</td><td><b>반도체 메모리</b> (셀 단위)</td></tr>
+<tr><td>속도</td><td>느림</td><td><b>빠름</b></td></tr>
+<tr><td>소음 · 발열 · 전력</td><td>많음</td><td>적음</td></tr>
+<tr><td>충격</td><td>약함 (배드 섹터 발생 가능)</td><td><b>강함</b></td></tr>
+<tr><td>무게 · 크기</td><td>무겁고 큼</td><td>가볍고 소형 (노트북에 적합)</td></tr>
+<tr><td>가격 · 용량</td><td>저렴, 대용량 → 백업·보관용</td><td>비쌈</td></tr>
+</table>
+<ul><li><span class="trap">함정</span>: “SSD는 외부 충격에 약하고 배드 섹터가 생긴다” ✗ (HDD의 단점)</li></ul>
+
+<h3><b>3-2.</b> 광학 디스크</h3>
+<ul>
+<li>CD-ROM: 용량 적음, 읽기 전용 (음악·소프트웨어 설치용)</li>
+<li>DVD: 4.7GB ~ 17GB, 영화·영상 저장</li>
+<li><b>블루레이</b>: 단층 <b>25GB</b> / 복층 <b>50GB</b>, HD급 고화질 비디오 저장용 차세대 광학 장치</li>
+</ul>
+
+<h3><b>3-3.</b> 하드디스크 연결 방식</h3>
+<table>
+<tr><th>방식</th><th>특징</th></tr>
+<tr><td>IDE</td><td>최대 <b>2개</b> 장치 연결</td></tr>
+<tr><td>EIDE</td><td>최대 <b>4개</b> 장치 연결</td></tr>
+<tr><td><b>SATA</b></td><td><b>직렬</b> 인터페이스, 빠른 전송, 마스터/슬레이브 자동 지정, <b>핫 플러그인</b> 지원, 케이블이 얇아 통풍 우수</td></tr>
+<tr><td>SCSI</td><td>최대 <b>7~15개</b> 연결, 빠른 전송·높은 안정성</td></tr>
+<tr><td><b>RAID</b></td><td>여러 하드디스크를 <b>하나처럼</b> 사용, 자동 복제·백업, <b>미러링 + 스트라이핑</b>으로 안정성·속도 향상. 서버·워크스테이션</td></tr>
+</table>
+<ul>
+<li><span class="trap">함정</span>: “SATA는 병렬 인터페이스” ✗ (직렬) · “RAID는 하드디스크·CD-ROM·스캐너를 통합 연결” ✗ (하드디스크 전용 기술)</li>
+</ul>
+
+<h3><b>3-4.</b> 파티션</h3>
+<ul>
+<li>하나의 물리적 하드디스크를 C:, D: 등 여러 영역으로 나누는 것</li>
+<li>파티션을 나눈 뒤에는 <b>포맷</b>해야 사용 가능</li>
+<li>파티션마다 <b>서로 다른 운영체제</b> 설치 가능 (예: C 윈도우, D 리눅스)</li>
+<li>하나의 파티션에는 <b>한 가지 파일 시스템</b>만 사용 (예: C NTFS, D FAT32)</li>
+<li><span class="trap">함정</span>: “모든 파티션에 동일한 운영체제만 설치 가능” ✗</li>
+</ul>
+
+<h3><b>3-5.</b> 입력 장치</h3>
+<table>
+<tr><th>장치</th><th>설명</th></tr>
+<tr><td>OMR</td><td>컴퓨터용 사인펜 표시를 빛으로 판독 → 객관식 시험 채점</td></tr>
+<tr><td>OCR</td><td>인쇄·손글씨 문자를 빛으로 판독 → 세금 고지서, 공공요금 청구서</td></tr>
+<tr><td>MICR</td><td>자기 잉크 문자 판독 → <b>수표·어음</b></td></tr>
+<tr><td>바코드 판독기</td><td>바코드를 빛으로 판독 → POS 시스템</td></tr>
+<tr><td>키오스크</td><td>공공장소의 무인 자동화 정보 안내 시스템, 터치스크린 방식</td></tr>
+<tr><td>스캐너 · 디지타이저</td><td>그림·사진을 이미지 파일로 입력 / 그래픽·CAD 작업용 입력</td></tr>
+</table>
+<ul><li>기타: 라이트펜, 터치패드, 터치스크린 · <span class="trap">함정</span>: 펌웨어는 입력 장치가 아님</li></ul>
+
+<h3><b>3-6.</b> 출력 장치</h3>
+<ul>
+<li><b>모니터 용어</b>
+  <ul>
+  <li>픽셀: 화면을 이루는 최소 단위 · 점 간격: 픽셀 사이의 거리</li>
+  <li><b>해상도</b>: 모니터에 포함된 픽셀 수, 이미지를 얼마나 세밀하게 표시하는지. 픽셀이 많을수록 높음</li>
+  <li><b>재생률</b>(Refresh Rate): 초당 화면을 다시 그리는 횟수. 높을수록 깜빡임 감소</li>
+  <li>LCD: 얇고 가볍고 전력 소모 적음, 보는 각도에 따라 선명도가 달라짐</li>
+  </ul></li>
+<li><b>레이저 프린터</b>: 비충격식, 복사기 원리, 소음 적음·빠름·고해상도</li>
+<li><b>3D 프린터</b>: 입력한 도면으로 3차원 입체 물체 제작. 방식은 <b>적층형</b>(쌓아 올림) / <b>절삭형</b>(재료를 깎음). 기계·건축·예술·우주·의료 분야</li>
+<li class="note">※ 강의에서 “옛날 충격식은 잉크젯”이라고 했지만, 잉크젯도 비충격식입니다. 충격식 프린터의 대표는 <b>도트 매트릭스</b>입니다.</li>
+</ul>
+
+<h3><b>3-7.</b> 프린터 설정 · 스풀</h3>
+<ul>
+<li><b>기본 프린터</b>: 프린터를 지정하지 않아도 자동으로 선택되는 프린터
+  <ul>
+  <li><b>한 대만</b> 지정 가능, 아이콘에 녹색 <b>체크 표시</b></li>
+  <li>로컬·네트워크 프린터 <b>모두</b> 기본 프린터로 지정 가능 (<span class="trap">“로컬만 가능”</span> ✗)</li>
+  <li>설치 가능한 프린터 수는 제한 없음, 기본 프린터 변경·삭제 가능</li>
+  </ul></li>
+<li>프린터 설치: 로컬 / 네트워크·무선·블루투스 중 선택. <b>포트 지정은 로컬 프린터</b>에서 함 (<span class="trap">“네트워크 프린터는 포트를 지정”</span> ✗)</li>
+<li>인쇄 중·대기 중인 문서: 일시 중지·다시 시작·<b>취소 가능</b>. 단, 용지 방향·종류·매수 변경은 <b>불가</b> → 취소 후 다시 설정</li>
+<li><b>스풀(SPOOL)</b>: 인쇄할 내용을 프린터로 보내기 전에 <b>하드디스크에 임시 저장</b>. 저속 프린터를 CPU와 병행 작동시켜 전체 효율 향상 → 인쇄 중에도 다른 프로그램 사용 가능</li>
+</ul>
+
+<h3><b>3-8.</b> 연결 포트</h3>
+<table>
+<tr><th>포트</th><th>특징</th></tr>
+<tr><td>직렬 포트 (Serial)</td><td>한 번에 <b>1비트</b> 전송. 마우스·모뎀</td></tr>
+<tr><td>병렬 포트 (Parallel)</td><td>한 번에 <b>여러 비트</b> 전송. 프린터·스캐너</td></tr>
+<tr><td>PS/2</td><td>IBM이 개발한 마우스·키보드 포트. 마우스 <b>녹색</b>, 키보드 <b>보라색</b></td></tr>
+<tr><td><b>USB</b></td><td>직렬·병렬·PS/2를 대체하는 범용 직렬 버스. 허브 사용 시 최대 <b>127개</b> 연결, 플러그 앤 플레이·핫 플러그 지원</td></tr>
+<tr><td><b>HDMI</b></td><td>영상 + 음향 신호를 <b>압축 없이</b> 통합 전송하는 고선명 멀티미디어 인터페이스</td></tr>
+</table>
+
+<div class="point">
+<h3><b>3-9. Part 3</b> 시험 포인트</h3>
+<ul>
+<li>SSD = 반도체·빠름·충격에 강함·소음 없음·비쌈 / HDD = 자기 디스크·저렴·대용량</li>
+<li>블루레이 단층 25GB / 복층 50GB</li>
+<li>IDE 2개, EIDE 4개, SCSI 7~15개, SATA 직렬·핫플러그, RAID 여러 디스크를 하나처럼</li>
+<li>OMR 시험 답안, OCR 고지서, MICR 수표·어음</li>
+<li>기본 프린터 1대, 로컬·네트워크 모두 가능 / 스풀 = 하드디스크에 임시 저장</li>
+<li>USB 127개, HDMI 비압축 영상+음향</li>
+</ul>
+</div>
+
+<!-- ================= SUMMARY ================= -->
+<h2>전체 요약표</h2>
+<table>
+<tr><th>주제</th><th>핵심 키·내용</th><th>함정</th></tr>
+<tr><td>취급 데이터 분류</td><td>아날로그·디지털·하이브리드</td><td>슈퍼컴퓨터는 처리 능력 분류</td></tr>
+<tr><td>아날로그</td><td>증폭 회로, 미적분, 빠름</td><td>디지털과 설명 뒤바꾸기</td></tr>
+<tr><td>워크스테이션</td><td>RISC 프로세서</td><td>—</td></tr>
+<tr><td>세대별 소자</td><td>진공관 → TR → IC → LSI → VLSI</td><td>5세대에 IC 넣기</td></tr>
+<tr><td>자료 단위</td><td>비트 최소, 니블 4비트, 바이트 문자, 워드 명령</td><td>니블 8비트 ✗</td></tr>
+<tr><td>1GB</td><td>1024 × 1024 × 1024 바이트</td><td>—</td></tr>
+<tr><td>코드</td><td>BCD 6 · ASCII 7 · EBCDIC 8 · 유니코드 16</td><td>대형 컴퓨터용은 EBCDIC</td></tr>
+<tr><td>오류 코드</td><td>패리티 검출 / 해밍 검출+교정</td><td>패리티로 교정 ✗</td></tr>
+<tr><td>CPU 레지스터</td><td>PC 다음 명령, IR 현재 명령, 누산기 연산 결과</td><td>레지스터가 느리다 ✗</td></tr>
+<tr><td>CISC / RISC</td><td>RISC 명령 적음·프로그래밍 복잡·빠름</td><td>RISC 프로그래밍 간단 ✗</td></tr>
+<tr><td>ROM / RAM</td><td>ROM 비휘발(BIOS), RAM 휘발</td><td>BIOS가 RAM에 ✗</td></tr>
+<tr><td>SRAM / DRAM</td><td>SRAM 캐시, DRAM 주기억·재충전</td><td>—</td></tr>
+<tr><td>기타 메모리</td><td>캐시·가상·버퍼·연관·플래시</td><td>연관 = 기억된 내용으로 접근</td></tr>
+<tr><td>인터럽트</td><td>외부 / 내부(트랩) / 소프트웨어</td><td>불법 명령은 내부</td></tr>
+<tr><td>SSD</td><td>반도체, 빠름, 충격에 강함</td><td>배드 섹터 ✗</td></tr>
+<tr><td>연결 방식</td><td>SATA 직렬, RAID 여러 디스크를 하나로</td><td>SATA 병렬 ✗, RAID에 CD·스캐너 ✗</td></tr>
+<tr><td>기본 프린터</td><td>1대, 체크 표시, 로컬·네트워크 가능</td><td>로컬만 ✗</td></tr>
+<tr><td>스풀</td><td>하드디스크에 임시 저장</td><td>대기 중 문서 설정 변경 ✗</td></tr>
+<tr><td>포트</td><td>USB 127개, HDMI 비압축</td><td>—</td></tr>
+</table>
+
+<p class="foot">이 자료는 학습 보조용 요약입니다. 시험 출제 범위와 세부 기능은 교재와 기출문제로 함께 확인하세요.</p>
+
+</body>
+</html>

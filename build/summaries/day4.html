@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>컴활2급 4일차 핵심정리</title>
+<style>
+  @page { size: A4; margin: 18mm 17mm; }
+  body { font-family: "Malgun Gothic", "맑은 고딕", sans-serif; font-size: 10.5pt; line-height: 1.6; color: #222; }
+  h1 { text-align: center; color: #2f5496; font-size: 20pt; font-weight: normal; margin: 30px 0 6px; }
+  .sub { text-align: center; color: #2f5496; font-size: 13pt; margin-bottom: 18px; }
+  .src { margin: 0 30px 26px; font-size: 10pt; }
+  h2 { color: #4472c4; font-size: 15pt; font-weight: normal; margin: 30px 0 8px; page-break-after: avoid; }
+  h2 b { font-weight: bold; }
+  h3 { color: #4472c4; font-size: 12pt; font-weight: normal; margin: 18px 0 4px; page-break-after: avoid; }
+  h3 b { font-weight: bold; }
+  ul { margin: 4px 0 6px; padding-left: 26px; }
+  li { margin: 2px 0; }
+  table { border-collapse: collapse; width: 100%; margin: 6px 0 8px; font-size: 10pt; page-break-inside: avoid; }
+  th { text-align: left; font-weight: normal; border-bottom: 1px solid #000; padding: 3px 6px; }
+  td { padding: 3px 6px; vertical-align: top; }
+  .trap { color: #c00000; font-weight: bold; }
+  .point { border-bottom: 3px double #555; padding-bottom: 6px; margin-bottom: 10px; }
+  .foot { font-style: italic; margin-top: 30px; font-size: 10pt; }
+  .note { font-size: 9.5pt; color: #555; }
+</style>
+</head>
+<body>
+
+<h1>컴퓨터 활용능력 2급 필기 — 4일차 핵심 정리</h1>
+<div class="sub">컴퓨터 일반: 소프트웨어 · 프로그래밍 언어 · 웹 언어 · 멀티미디어</div>
+<p class="src">출처: Lilys AI(Readray)로 분석한 강의 2편 (4일차 1·2). 강의 내용을 요약·재구성했으며, 강의 중 사실과 다른 설명은 바로잡고 표시해 두었습니다.</p>
+
+<!-- ================= PART 1 ================= -->
+<h2><b>Part 1.</b> 소프트웨어</h2>
+
+<h3><b>1-1.</b> 소프트웨어의 분류</h3>
+<table>
+<tr><th>구분</th><th>설명</th><th>예</th></tr>
+<tr><td><b>시스템 소프트웨어</b></td><td>컴퓨터를 효율적으로 운영하기 위한 소프트웨어. 컴퓨터와 사용자 사이의 <b>중계자</b> 역할. 제어 프로그램 + 처리 프로그램</td><td>운영체제(Windows, Linux, UNIX), 컴파일러, 어셈블러, 라이브러리</td></tr>
+<tr><td><b>응용 소프트웨어</b></td><td><b>운영체제의 도움을 받아</b> 특정 작업을 수행하는 소프트웨어</td><td>엑셀, 한글, 워드, 파워포인트, 포토샵, 한컴오피스</td></tr>
+</table>
+<ul>
+<li>운영체제 구성 복습: 제어 프로그램(감시, 작업 관리, 데이터 관리) / 처리 프로그램(언어 번역, 서비스, 문제 처리)</li>
+<li><span class="trap">함정</span>: “운영체제의 도움을 받아 컴퓨터를 사용하게 해 주는 것”은 시스템 소프트웨어가 아니라 <b>응용 소프트웨어</b> 설명</li>
+</ul>
+
+<h3><b>1-2.</b> 사용권에 따른 소프트웨어 분류 (꾸준히 출제)</h3>
+<table>
+<tr><th>종류</th><th>핵심 키워드</th></tr>
+<tr><td>상용 소프트웨어</td><td>일정 금액을 지불하고 <b>구입</b>해서 사용</td></tr>
+<tr><td>프리웨어</td><td>누구나 <b>무료</b>로 사용하는 공개 소프트웨어</td></tr>
+<tr><td>셰어웨어</td><td><b>일정 기간 · 일부 기능 제한</b> 상태로 무료 사용 후 구매 유도</td></tr>
+<tr><td>애드웨어</td><td><b>광고</b>를 보는 대가로 무료 사용</td></tr>
+<tr><td>데모 버전</td><td>소프트웨어 <b>홍보</b> 목적으로 기능·기간을 제한해 무료 배포</td></tr>
+<tr><td><b>알파 버전</b></td><td>제작 <b>회사 내부</b>에서 테스트하기 위한 버전</td></tr>
+<tr><td><b>베타 버전</b></td><td>정식 출시 전 <b>고객(일반 사용자)</b>에게 미리 공개해 평가받는 버전</td></tr>
+<tr><td><b>패치 버전</b></td><td>이미 배포된 프로그램의 <b>오류 수정·성능 향상</b>을 위해 일부 파일을 변경 (예: 윈도우 업데이트)</td></tr>
+<tr><td>번들</td><td>하드웨어·소프트웨어를 구입할 때 <b>끼워서 무료로</b> 주는 프로그램</td></tr>
+</table>
+<ul><li>암기: <b>알파 = 회사 안</b>, <b>베타 = 고객</b> · 기출: “누구나 임의로 사용 = 프리웨어 / 기간·기능 제한 = 셰어웨어 / 구입 = 상용”</li></ul>
+
+<h3><b>1-3.</b> 유틸리티 · 압축 프로그램</h3>
+<ul>
+<li><b>유틸리티</b>: 컴퓨터를 더 쉽게 사용하도록 관리·유지·편의 기능을 돕는 <b>보조 프로그램</b>. Windows 제공 예: 파일 탐색기, 그림판, 계산기, 메모장</li>
+<li><span class="trap">함정</span>: “유틸리티는 컴퓨터 동작에 필수적이다” ✗ (필수는 시스템 소프트웨어)</li>
+<li><b>압축 프로그램</b>: 여러 파일을 하나로 묶고 용량을 줄여 전송 시간 절약·디스크 공간 효율화</li>
+<li>이미 압축한 파일을 다시 압축해도 <b>계속 줄어들지는 않음</b></li>
+<li>압축 형식: <b>ZIP, RAR, LZH, ARJ</b> 등</li>
+</ul>
+
+<h3><b>1-4.</b> 프로그래밍 언어: 저급 vs 고급</h3>
+<table>
+<tr><th>구분</th><th>저급 언어</th><th>고급 언어</th></tr>
+<tr><td>형태</td><td>기계어, 어셈블리어</td><td>사람이 읽고 쓰기 쉬운 언어</td></tr>
+<tr><td>특징</td><td>컴퓨터가 직접 이해, 처리 속도 빠름, 사람이 이해하기 어려움</td><td>컴파일러·인터프리터로 기계어로 번역해 실행, 활용 범위 넓음</td></tr>
+<tr><td>예</td><td>—</td><td>Java, C, Python, BASIC, COBOL, FORTRAN, Pascal</td></tr>
+</table>
+
+<h3><b>1-5.</b> 자주 나오는 고급 언어 3가지</h3>
+<table>
+<tr><th>언어</th><th>핵심 특징</th></tr>
+<tr><td><b>Java</b></td><td><b>객체 지향</b>, 운영체제·하드웨어에 독립적, 바이트 코드 생성 → 플랫폼에 상관없이 실행, <b>이식성 높음</b></td></tr>
+<tr><td><b>C</b></td><td><b>컴파일</b> 방식, <b>구조적(절차적)</b> 프로그래밍, <b>하드웨어 제어 가능</b>, 빠르고 효율적인 시스템 언어</td></tr>
+<tr><td><b>Python</b></td><td><b>인터프리터</b> 방식, 문법이 간단·직관적이라 초보자도 쉬움, 데이터 분석·인공지능·웹 개발, 플랫폼 독립적(Windows·Linux·UNIX·Mac), 객체 지향 (최근 단독 출제)</td></tr>
+</table>
+<ul><li><span class="trap">함정</span>: “파이썬은 절차 지향 언어” ✗ (객체 지향)</li></ul>
+
+<h3><b>1-6.</b> 언어 번역 프로그램: 컴파일러 vs 인터프리터</h3>
+<ul><li>원시 프로그램을 기계어 형태의 목적 프로그램으로 바꾸는 프로그램. 종류: 어셈블러, 컴파일러, 인터프리터</li></ul>
+<table>
+<tr><th>구분</th><th>컴파일러</th><th>인터프리터</th></tr>
+<tr><td>번역 단위</td><td><b>프로그램 전체</b></td><td><b>한 줄씩</b></td></tr>
+<tr><td>목적 프로그램</td><td><b>생성됨</b> (가장 많이 출제)</td><td>생성 안 됨</td></tr>
+<tr><td>번역 속도</td><td>느림</td><td>빠름</td></tr>
+<tr><td>실행 속도</td><td>빠름</td><td>느림</td></tr>
+<tr><td>대표 언어</td><td>C</td><td>Python</td></tr>
+</table>
+<ul><li><span class="trap">함정</span>: “컴파일러는 번역 속도가 빠르다” ✗</li></ul>
+
+<h3><b>1-7.</b> 절차적 언어 vs 객체 지향 언어</h3>
+<table>
+<tr><th>구분</th><th>절차적 언어</th><th>객체 지향 언어</th></tr>
+<tr><td>방식</td><td><b>순서대로</b> 위에서 아래로 실행 (요리 레시피)</td><td><b>객체(물건) 단위</b>로 각 객체가 스스로 동작</td></tr>
+<tr><td>특징</td><td>구조와 작업 절차 중시, 논리적 흐름대로 처리</td><td>크고 복잡한 프로그램 구축이 어려운 <b>절차적 언어의 문제점을 해결</b>하려고 개발</td></tr>
+<tr><td>대표 언어</td><td>C, FORTRAN, BASIC, COBOL</td><td>C++, Smalltalk, Java, Python</td></tr>
+</table>
+
+<table>
+<tr><th>객체 지향 특징</th><th>뜻</th><th>쉬운 예</th></tr>
+<tr><td><b>상속성</b></td><td>기존 클래스 기능을 물려받아 재사용·확장</td><td>자동차 기능을 전기차가 물려받음</td></tr>
+<tr><td><b>추상화</b></td><td>복잡한 것은 감추고 핵심만 표현</td><td>엔진 구조를 몰라도 운전 가능</td></tr>
+<tr><td><b>캡슐화</b></td><td>데이터와 기능을 묶고 외부 접근 제한</td><td>리모컨 버튼만 누르고 내부 회로는 못 건드림</td></tr>
+<tr><td><b>다형성</b></td><td>같은 명령이 객체에 따라 다르게 동작</td><td>“달린다” → 자동차는 바퀴, 사람은 발</td></tr>
+<tr><td><b>오버로딩</b></td><td>이름은 같지만 매개변수가 다른 메서드 여러 개 정의</td><td>“연다” → 차 문 열기, 창문 열기</td></tr>
+</table>
+<ul><li>요약: 상속으로 재사용, 추상화로 단순화, 캡슐화로 보호, 다형성으로 유연하게</li></ul>
+
+<h3><b>1-8.</b> 웹 프로그래밍 언어 (키워드로 찾기)</h3>
+<table>
+<tr><th>언어</th><th>키워드</th></tr>
+<tr><td>HTML</td><td>웹 페이지를 만드는 기본 언어 (텍스트·이미지·하이퍼링크)</td></tr>
+<tr><td><b>HTML5</b></td><td>차세대 웹 표준, 비디오·오디오 등 멀티미디어 기능 추가, <b>ActiveX 없이</b> 멀티미디어 재생</td></tr>
+<tr><td><b>DHTML</b></td><td>Dynamic. HTML 단점 보완, 애니메이션 지원, 사용자 상호작용에 따른 <b>동적인 웹 페이지</b></td></tr>
+<tr><td><b>XML</b></td><td>데이터 교환용. HTML과 SGML의 장점 결합, <b>사용자가 태그를 직접 정의</b></td></tr>
+<tr><td>SGML</td><td>XML의 기반 언어. 문서를 저장·전송·자동 처리</td></tr>
+<tr><td>VRML</td><td><b>3차원 가상 공간</b> 표현</td></tr>
+<tr><td>WML</td><td><b>무선 접속</b> 기기(PDA·휴대폰)에서 텍스트·이미지 표시</td></tr>
+<tr><td>ASP</td><td><b>Windows 환경</b>의 서버 측 스크립트 언어 (동적 웹 페이지)</td></tr>
+<tr><td>JSP</td><td><b>Java 기반</b> 서버 측 언어, 운영체제에 상관없이 실행</td></tr>
+</table>
+
+<div class="point">
+<h3><b>1-9. Part 1</b> 시험 포인트</h3>
+<ul>
+<li>운영체제의 도움을 받는 것 = 응용 소프트웨어, 유틸리티는 필수 아님</li>
+<li>알파 = 회사 내부, 베타 = 고객, 패치 = 오류 수정·업데이트, 셰어웨어 = 기간·기능 제한</li>
+<li>Java 이식성·객체 지향, C 컴파일·하드웨어 제어, Python 인터프리터·객체 지향</li>
+<li>컴파일러 = 전체 번역·목적 프로그램 생성·실행 빠름</li>
+<li>HTML5 = ActiveX 없이 멀티미디어, DHTML = 동적, XML = 태그 직접 정의</li>
+</ul>
+</div>
+
+<!-- ================= PART 2 ================= -->
+<h2><b>Part 2.</b> 멀티미디어</h2>
+
+<h3><b>2-1.</b> 멀티미디어의 4가지 특징</h3>
+<table>
+<tr><th>특징</th><th>뜻</th></tr>
+<tr><td><b>통합성</b></td><td>텍스트·그림·소리·영상 등 여러 매체를 하나로 통합</td></tr>
+<tr><td><b>비선형성</b></td><td>처음부터 끝까지 순서대로가 아니라 <b>원하는 부분을 자유롭게 선택</b></td></tr>
+<tr><td><b>쌍방향성</b></td><td>사용자와 컴퓨터가 서로 주고받음 (상호작용)</td></tr>
+<tr><td><b>디지털화</b></td><td>모든 정보를 0과 1로 저장, 복사해도 원본 그대로 유지</td></tr>
+</table>
+<ul><li><span class="trap">함정</span>: “파일 형식이 획일화되어 제작이 쉬워진다” ✗ (선형성 설명. 멀티미디어는 <b>비선형</b>)</li></ul>
+
+<h3><b>2-2.</b> 멀티미디어 활용 분야</h3>
+<table>
+<tr><th>용어</th><th>설명</th></tr>
+<tr><td>VOD</td><td>주문형 비디오. 원하는 시간에 영화·드라마를 실시간 전송받아 시청</td></tr>
+<tr><td><b>MOD</b></td><td>주문형 음악. 모바일 인터넷으로 음원을 <b>스트리밍</b>해 실시간 청취 (멜론·지니 등)</td></tr>
+<tr><td>VCS</td><td>화상 회의 시스템. 떨어진 곳에서 비디오·오디오로 회의</td></tr>
+<tr><td>CAI</td><td>컴퓨터 보조 교육. 컴퓨터를 수업 매체로 활용</td></tr>
+<tr><td>PACS</td><td>의료 영상 정보 시스템. X-ray·CT 등 의료 영상을 디지털로 저장·전송</td></tr>
+<tr><td>VDT 증후군</td><td>장시간 컴퓨터 사용으로 생기는 신체적·정신적 장애</td></tr>
+<tr><td>PDA</td><td>스마트폰 이전의 휴대용 개인 정보 단말기</td></tr>
+</table>
+
+<h3><b>2-3.</b> 멀티미디어 관련 기술</h3>
+<table>
+<tr><th>기술</th><th>핵심 키워드</th></tr>
+<tr><td><b>VR (가상 현실)</b></td><td>컴퓨터 그래픽·시뮬레이션으로 <b>가상 세계를 현실처럼 체험</b> (3차원)</td></tr>
+<tr><td><b>AR (증강 현실)</b></td><td>실제 화면에 가상의 3차원 정보를 <b>실시간으로 겹쳐</b> 보여 줌</td></tr>
+<tr><td>홀로그램</td><td>빛의 간섭 현상으로 입체 정보를 기록·재생</td></tr>
+<tr><td>키오스크</td><td>무인 정보 안내·주문 시스템 (터치스크린)</td></tr>
+<tr><td><b>디지털 워터마킹</b></td><td>사진·동영상 등 디지털 데이터에 <b>저작권 정보를 비밀리에 삽입</b>해 관리 (최근 출제)</td></tr>
+</table>
+<ul><li><span class="trap">함정</span>: “가상 현실은 2차원 그래픽” ✗ (3차원)</li></ul>
+
+<h3><b>2-4.</b> 비트맵 vs 벡터 (계속 출제)</h3>
+<table>
+<tr><th>구분</th><th>비트맵 (래스터)</th><th>벡터</th></tr>
+<tr><td>표현</td><td><b>점(픽셀)</b></td><td>점과 점을 잇는 <b>직선·곡선</b></td></tr>
+<tr><td>확대 시</td><td><b>계단 현상</b>으로 깨짐</td><td>깨지지 않고 선명</td></tr>
+<tr><td>용량</td><td>큼 (색상 정보가 많을수록 증가)</td><td>작음</td></tr>
+<tr><td>표시 속도</td><td>빠름</td><td>느림</td></tr>
+<tr><td>용도</td><td>사진처럼 <b>사실적인 이미지</b></td><td>로고·아이콘 등 <b>단순한 그래픽</b> (일러스트레이터)</td></tr>
+<tr><td>형식</td><td>BMP, GIF, JPG, PNG</td><td>AI, WMF</td></tr>
+</table>
+
+<h3><b>2-5.</b> 그래픽 관련 용어 (모두 중요)</h3>
+<table>
+<tr><th>용어</th><th>뜻</th></tr>
+<tr><td><b>모델링</b></td><td>대상을 <b>3차원 형태</b>로 만드는 것 (캐릭터의 3D 몸체 만들기)</td></tr>
+<tr><td><b>렌더링</b></td><td>3D 이미지에 <b>명암·색상·질감</b>을 입혀 사실감 있게 표현 (피부색·조명·그림자). 모델링 다음 단계</td></tr>
+<tr><td>디더링</td><td>제한된 색을 조합해 더 다양한 색감·음영 표현</td></tr>
+<tr><td><b>모핑</b></td><td>한 이미지가 다른 이미지로 <b>서서히 변하는</b> 효과</td></tr>
+<tr><td>인터레이싱</td><td>그래픽: 윤곽부터 점점 선명하게 표시 / 영상: 화면 줄을 번갈아 표시</td></tr>
+<tr><td>메조틴트</td><td>수많은 점과 선으로 거칠고 빈티지한 질감 표현</td></tr>
+<tr><td><b>앨리어싱</b></td><td>저해상도에서 경계가 <b>계단처럼 깨져</b> 보이는 현상</td></tr>
+<tr><td><b>안티앨리어싱</b></td><td>경계 픽셀 색을 혼합해 <b>부드럽게</b> 처리 → 계단 현상 최소화</td></tr>
+<tr><td>리터칭</td><td>이미지·사진 일부를 수정·보정 (잡티 제거, 색 조정)</td></tr>
+<tr><td>블러링</td><td>초점이 안 맞은 것처럼 흐릿하게 처리</td></tr>
+</table>
+<ul>
+<li><span class="trap">함정</span>: “모델링은 명암·색상·질감을 넣어 사실감을 더하는 것” ✗ (렌더링)</li>
+<li>애니메이션 기법: 셀(셀로판에 옮겨 채색), 키프레임, 클레이(점토)</li>
+</ul>
+
+<h3><b>2-6.</b> 그래픽 파일 형식</h3>
+<table>
+<tr><th>형식</th><th>방식 / 압축</th><th>특징</th></tr>
+<tr><td><b>GIF</b></td><td>비트맵 / <b>무손실</b></td><td><b>256색</b>, <b>투명 배경 + 애니메이션</b> 가능</td></tr>
+<tr><td><b>JPG</b></td><td>비트맵 / <b>손실·무손실 모두</b></td><td>압축률 높아 인터넷 정지 이미지·사진에 적합</td></tr>
+<tr><td><b>PNG</b></td><td>비트맵 / 무손실</td><td>GIF를 대체하려고 개발, <b>투명 배경 가능, 애니메이션 불가</b></td></tr>
+<tr><td>BMP · WMF</td><td>비트맵 / 벡터</td><td>Windows 기본 형식</td></tr>
+</table>
+<ul><li><span class="trap">함정</span>: “GIF는 손실·무손실 압축 모두 지원” ✗ (JPG)</li></ul>
+
+<h3><b>2-7.</b> 사운드 파일 형식</h3>
+<table>
+<tr><th>형식</th><th>특징</th></tr>
+<tr><td><b>WAV</b></td><td>아날로그 소리를 디지털화, <b>소리의 파형을 그대로 저장</b>. 음질 좋지만 용량 큼, 녹음 조건에 따라 크기 가변, Windows Media Player로 재생</td></tr>
+<tr><td><b>MIDI</b></td><td>전자 악기 간 <b>연주 정보</b>를 전송하는 규격. 음 높이·길이·세기·악기 종류를 <b>기호화</b>해 저장 → 용량 매우 작음</td></tr>
+<tr><td>MP3</td><td>MPEG 기반 고압축, 용량 작고 음질 좋음, 대표 오디오 형식</td></tr>
+</table>
+<ul><li><span class="trap">함정</span>: “WAV는 음높이·음길이 등 음악 기호가 정의되어 있다” ✗ (MIDI)</li></ul>
+
+<h3><b>2-8.</b> 동영상 파일 형식 · MPEG 규격</h3>
+<ul>
+<li>동영상 형식: MPG(MPEG), ASF, <b>AVI</b>(Windows 표준), MOV, DivX — JPG·GIF·BMP는 그림 형식이므로 구별</li>
+<li><b>MPEG</b>: 동영상과 오디오 <b>모두 압축</b>, 손실 압축으로 중복 데이터 제거, 비대칭 압축(압축은 복잡, 재생은 빠름)</li>
+<li><b>DivX</b>: MPEG-4와 MP3를 재조합한 코덱, 수 GB의 DVD를 CD 1~2장 분량으로 줄이는 고화질 동영상 형식</li>
+</ul>
+<table>
+<tr><th>MPEG 규격</th><th>키워드</th></tr>
+<tr><td>MPEG-1</td><td>비디오 CD 수준 화질</td></tr>
+<tr><td>MPEG-2</td><td>DVD, HDTV, 위성 방송</td></tr>
+<tr><td><b>MPEG-4</b></td><td>인터넷·무선 통신용, <b>복합 멀티미디어 서비스의 통합 표준</b></td></tr>
+<tr><td><b>MPEG-7</b></td><td>멀티미디어 데이터 <b>검색</b>, 디지털 방송·전자도서관·전자상거래</td></tr>
+<tr><td><b>MPEG-21</b></td><td>디지털 콘텐츠의 <b>제작·유통·보안</b> 전 과정 관리</td></tr>
+</table>
+
+<h3><b>2-9.</b> 기타 멀티미디어 용어</h3>
+<table>
+<tr><th>용어</th><th>설명</th></tr>
+<tr><td>코덱</td><td>아날로그 ↔ 디지털 신호 변환 장치 (압축·복원)</td></tr>
+<tr><td>스트리밍</td><td>다운로드 없이 실시간 재생</td></tr>
+<tr><td>DirectX</td><td>게임·영상 등 고성능 멀티미디어 처리를 지원하는 마이크로소프트 API</td></tr>
+<tr><td>HCI</td><td>사람과 컴퓨터 간 자연스러운 상호작용 기술</td></tr>
+<tr><td>데이터 글러브 · HMD · 구글 글래스</td><td>손 움직임을 입력하는 장갑 / 머리에 쓰는 입체 디스플레이 / 안경형 웨어러블</td></tr>
+<tr><td>하이퍼링크 · 하이퍼미디어</td><td>문서와 문서를 연결 / 텍스트·이미지·영상을 링크로 연결</td></tr>
+<tr><td>IPTV</td><td>인터넷망으로 실시간 방송·VOD 제공 (셋톱박스 필요)</td></tr>
+<tr><td>샘플링 · PCM · 시퀀싱</td><td>소리를 일정 간격으로 측정해 숫자로 변환 / 아날로그를 디지털로 바꾸는 대표 오디오 기술 / MIDI 음악 편집·제작</td></tr>
+</table>
+<ul>
+<li><b>모바일 멀티미디어 커뮤니케이션</b>: 모바일 화상전화, <b>LBS</b>(위치 기반 서비스), <b>MMS</b>(사진·동영상·음성 메시지) — DMB(디지털 멀티미디어 방송)는 해당 안 됨 (기출)</li>
+<li><span class="trap">함정</span>: 오디오 용어가 아닌 것 = 인터레이싱 · 멀티미디어 구성 요소가 아닌 것 = 트랜지스터</li>
+</ul>
+
+<div class="point">
+<h3><b>2-10. Part 2</b> 시험 포인트</h3>
+<ul>
+<li>멀티미디어 특징: 통합성·비선형성·쌍방향성·디지털화</li>
+<li>VR = 현실처럼 체험, AR = 겹쳐 보여 줌, 디지털 워터마킹 = 저작권 정보 삽입</li>
+<li>비트맵 = 점·확대 시 깨짐·사실적 / 벡터 = 선·깨지지 않음·로고</li>
+<li>모델링 → 렌더링, 모핑 = 서서히 변환, 안티앨리어싱 = 계단 현상 제거</li>
+<li>GIF 투명+애니메이션, PNG 투명만, JPG 손실·무손실 모두</li>
+<li>WAV 파형 그대로, MIDI 연주 정보 기호화 / MPEG-4 통합 표준, -7 검색, -21 유통·보안</li>
+</ul>
+</div>
+
+<!-- ================= SUMMARY ================= -->
+<h2>전체 요약표</h2>
+<table>
+<tr><th>주제</th><th>핵심 키·내용</th><th>함정</th></tr>
+<tr><td>시스템 / 응용</td><td>시스템 = 중계자·운영체제 / 응용 = 운영체제 도움</td><td>설명 뒤바꾸기</td></tr>
+<tr><td>사용권 분류</td><td>셰어웨어 기간·기능 제한, 애드웨어 광고, 번들 끼워 줌</td><td>알파(회사) ↔ 베타(고객)</td></tr>
+<tr><td>패치 버전</td><td>오류 수정·성능 향상 (윈도우 업데이트)</td><td>—</td></tr>
+<tr><td>유틸리티</td><td>보조 프로그램 (메모장·그림판·계산기)</td><td>필수 아님</td></tr>
+<tr><td>압축</td><td>ZIP·RAR·LZH·ARJ</td><td>재압축해도 계속 줄지 않음</td></tr>
+<tr><td>Java / C / Python</td><td>이식성·객체 / 컴파일·하드웨어 제어 / 인터프리터·쉬움</td><td>Python 절차 지향 ✗</td></tr>
+<tr><td>컴파일러</td><td>전체 번역, 목적 프로그램 생성, 실행 빠름</td><td>번역 속도 빠름 ✗</td></tr>
+<tr><td>객체 지향</td><td>상속·추상화·캡슐화·다형성·오버로딩</td><td>절차적 언어 문제 해결용</td></tr>
+<tr><td>웹 언어</td><td>HTML5 ActiveX 없이, DHTML 동적, XML 태그 정의</td><td>VRML 3D, WML 무선</td></tr>
+<tr><td>멀티미디어 특징</td><td>통합·비선형·쌍방향·디지털</td><td>획일화·선형 ✗</td></tr>
+<tr><td>VR / AR</td><td>현실처럼 체험 / 실시간으로 겹침</td><td>VR 2차원 ✗</td></tr>
+<tr><td>비트맵 / 벡터</td><td>점·깨짐 / 선·안 깨짐</td><td>직선·곡선은 벡터</td></tr>
+<tr><td>모델링 / 렌더링</td><td>3D 형태 / 명암·색·질감</td><td>설명 뒤바꾸기</td></tr>
+<tr><td>GIF / PNG / JPG</td><td>투명+애니 / 투명만 / 손실·무손실</td><td>GIF 손실 압축 ✗</td></tr>
+<tr><td>WAV / MIDI</td><td>파형 그대로 / 연주 정보 기호화</td><td>음악 기호는 MIDI</td></tr>
+<tr><td>MPEG</td><td>4 통합 표준, 7 검색, 21 제작·유통·보안</td><td>번호 혼동</td></tr>
+<tr><td>모바일 커뮤니케이션</td><td>화상전화·LBS·MMS</td><td>DMB 제외</td></tr>
+</table>
+
+<p class="note">※ 강의 화면의 일부 용어는 표준 표기로 정리했습니다. (예: 객체 지향 언어 “C언” → C++, 압축 형식 “LH” → LZH, PACS는 의료 영상을 디지털로 저장·전송하는 시스템)</p>
+<p class="foot">이 자료는 학습 보조용 요약입니다. 시험 출제 범위와 세부 기능은 교재와 기출문제로 함께 확인하세요.</p>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><title>컴활2급 1일차 핵심정리</title></head>
+<body>
+<h1>컴퓨터 활용능력 2급 필기 — 1일차 핵심 정리</h1>
+<p class="src">출처: 1일차 강의를 Lilys AI(Readray)로 분석해 요약·재구성했습니다. 실제 Windows 기본 설정과 다를 수 있는 부분은 실습으로 한 번 확인하세요.</p>
+
+<h2><b>Part 1.</b> 운영체제 (OS)</h2>
+
+<h3><b>1-1.</b> 개념</h3>
+<ul>
+<li>사용자와 컴퓨터 사이에서 시스템을 효율적으로 운영하는 <b>인터페이스</b> 역할</li>
+<li>응용 프로그램을 편리하게 쓰게 하고 하드웨어 성능을 최적화</li>
+<li>컴퓨터·스마트폰·노트북 등에 반드시 설치되는 대표적인 <b>시스템 소프트웨어</b></li>
+<li>종류: Windows 10/11, MS-DOS, UNIX, Linux, macOS, Chrome OS, OS/2</li>
+<li>실행 위치: 꺼져 있을 때는 하드디스크/SSD에 저장, <b>작동 중에는 메모리(주기억장치)</b>에서 실행 (기출 함정)</li>
+</ul>
+
+<h3><b>1-2.</b> 성능 평가 항목</h3>
+<table>
+<tr><th>항목</th><th>뜻</th><th>좋은 방향</th></tr>
+<tr><td>신뢰도</td><td>주어진 문제를 정확하게 처리하는 정도</td><td>높을수록</td></tr>
+<tr><td>사용 가능도</td><td>필요할 때 즉시 사용할 수 있는 정도</td><td>높을수록</td></tr>
+<tr><td>처리 능력</td><td>일정 시간 동안 처리하는 일의 양</td><td>높을수록</td></tr>
+<tr><td><b>응답 시간</b></td><td>명령 후 결과가 나올 때까지 걸리는 시간</td><td><b>낮을수록</b></td></tr>
+</table>
+
+<h3><b>1-3.</b> 구성 프로그램</h3>
+<ul>
+<li><b>제어 프로그램</b>: 감시, 작업 관리, 데이터 관리</li>
+<li><b>처리 프로그램</b>: 언어 번역, 서비스, 문제 처리</li>
+<li><span class="trap">함정</span>: 언어 번역은 <b>처리</b> 프로그램 (제어 프로그램 목록에 넣으면 ✗)</li>
+</ul>
+
+<h3><b>1-4.</b> 운영 방식</h3>
+<table>
+<tr><th>방식</th><th>설명</th><th>예시</th></tr>
+<tr><td><b>일괄 처리</b></td><td>데이터를 모아 한꺼번에 처리</td><td>급여 지급, 전기요금 청구</td></tr>
+<tr><td><b>실시간 처리</b></td><td>입력과 동시에 즉시 처리</td><td>ATM, 기차표 예약</td></tr>
+<tr><td>시분할 처리</td><td>CPU 시간을 잘게 나눠 여러 작업을 번갈아 처리</td><td>다수 사용자 동시 이용</td></tr>
+<tr><td>다중 처리</td><td>CPU가 <b>2개 이상</b></td><td>작업 분담, 속도·안정성 향상</td></tr>
+<tr><td>다중 프로그래밍</td><td>CPU <b>1개</b>로 여러 프로그램을 동시 처리</td><td>CPU 유휴 시간 최소화</td></tr>
+<tr><td>듀얼 시스템</td><td>두 CPU가 <b>같은 작업을 동시에</b> 수행</td><td>두 컴퓨터가 함께 시작</td></tr>
+<tr><td>듀플렉스 시스템</td><td>한 CPU가 작업, 다른 CPU는 <b>대기</b> (고장 시 교체 투입)</td><td>고장 대비</td></tr>
+<tr><td>분산 처리</td><td>여러 컴퓨터가 연결되어 작업을 나눠 처리</td><td>네트워크 기반</td></tr>
+<tr><td>클러스터링</td><td>두 대 이상의 컴퓨터를 하나처럼 묶어 사용</td><td>서버 묶음</td></tr>
+<tr><td>임베디드 시스템</td><td>하드웨어와 소프트웨어가 결합된 전용 제어 시스템</td><td>냉장고, TV, 자동차</td></tr>
+</table>
+<ul><li>발달 순서: <b>일괄 처리가 처음, 분산 처리가 마지막</b></li></ul>
+
+<div class="point">
+<h3><b>1-5. Part 1</b> 시험 포인트</h3>
+<ul>
+<li>운영체제는 작동 중 메모리에서 실행</li>
+<li>신뢰도·사용 가능도·처리 능력은 높게, 응답 시간은 낮게</li>
+<li>제어 프로그램 = 감시·작업 관리·데이터 관리, 나머지는 처리 프로그램</li>
+<li>듀얼 = 동시 수행, 듀플렉스 = 한쪽 대기</li>
+</ul>
+</div>
+
+<h2><b>Part 2.</b> Windows</h2>
+
+<h3><b>2-1.</b> 주요 특징</h3>
+<ul>
+<li><b>GUI</b>: 아이콘·메뉴를 마우스로 조작 (예전 CLI는 명령어 직접 입력)</li>
+<li><b>선점형 멀티태스킹</b>: 운영체제가 각 프로그램의 CPU 사용 시간을 자동 배분</li>
+<li><b>PnP(플러그 앤 플레이)</b>: 장치를 연결하면 자동 인식, 별도 설치 불필요</li>
+<li><b>핫 플러그</b>: 컴퓨터를 끄지 않고 장치를 연결·교체 — PnP와 혼동하게 출제되니 구분 필수</li>
+<li>64비트 지원, <b>NTFS</b> 파일 시스템(보안·압축·권한 설정)</li>
+<li><b>OLE</b>: 프로그램 간 데이터 연결·삽입 (엑셀 표를 워드에 넣고 원본 수정 시 자동 반영)</li>
+</ul>
+
+<h3><b>2-2.</b> Aero 기능과 점프 목록</h3>
+<table>
+<tr><th>기능</th><th>설명</th></tr>
+<tr><td>Aero Peek</td><td>열린 창을 투명하게 해 바탕 화면 미리 보기 (Win+D와 같은 효과)</td></tr>
+<tr><td>Aero Snap</td><td>창을 화면 가장자리에 맞춰 정렬</td></tr>
+<tr><td>Aero Shake</td><td>제목 표시줄을 흔들면 그 창만 남기고 나머지 최소화 (다시 흔들면 복원)</td></tr>
+<tr><td>점프 목록</td><td>작업 표시줄 아이콘을 우클릭하면 최근 사용 항목 표시 (고정·제거 가능)</td></tr>
+<tr><td>라이브러리</td><td>여러 폴더에 흩어진 파일을 종류별로 모아 보기 (실제 위치는 다름)</td></tr>
+</table>
+
+<h3><b>2-3.</b> 주요 단축키</h3>
+<table>
+<tr><th>단축키</th><th>기능</th><th>단축키</th><th>기능</th></tr>
+<tr><td>F2</td><td>이름 바꾸기</td><td>F3</td><td>검색</td></tr>
+<tr><td>F4</td><td>주소 표시줄 표시</td><td>F5</td><td>새로 고침</td></tr>
+<tr><td>Ctrl+D</td><td>휴지통으로 삭제 (Delete와 같음)</td><td><b>Shift+Delete</b></td><td>휴지통을 거치지 않고 <b>완전 삭제</b></td></tr>
+<tr><td>Ctrl+F4 / Ctrl+W</td><td>현재 창(문서) 닫기</td><td>Ctrl+Shift+N</td><td>새 폴더</td></tr>
+<tr><td>Ctrl+A</td><td>모두 선택</td><td>Alt+F4</td><td>현재 창 닫기</td></tr>
+<tr><td>Print Screen</td><td>화면 전체를 클립보드로 (최근 1개만)</td><td>Alt+Print Screen</td><td>활성 창만 클립보드로</td></tr>
+<tr><td>Win+Print Screen</td><td>화면을 파일로 저장</td><td>Win+Shift+S</td><td>드래그한 영역 캡처</td></tr>
+<tr><td>Ctrl+Alt+Del</td><td>잠금·작업 관리자 등 선택 화면</td><td>Ctrl+Shift+Esc</td><td>작업 관리자 바로 열기</td></tr>
+<tr><td>Ctrl+Esc</td><td>시작 메뉴 (Win 키와 같음)</td><td>Shift+F10</td><td>바로 가기 메뉴 (우클릭)</td></tr>
+<tr><td><b>Alt+Enter</b></td><td>선택 항목의 <b>속성</b> 창</td><td>Alt+Spacebar</td><td>창 조절 메뉴</td></tr>
+<tr><td>Alt+Tab</td><td>창 전환 (키를 떼면 사라짐)</td><td>Ctrl+Alt+Tab</td><td>창 목록 (키를 떼도 유지)</td></tr>
+<tr><td>Alt+Esc</td><td>열린 창을 차례로 전환</td><td>Alt+P / Alt+Shift+P</td><td>탐색기 미리 보기 / 세부 정보 창</td></tr>
+</table>
+
+<table>
+<tr><th>Win 키</th><th>기능</th><th>Win 키</th><th>기능</th></tr>
+<tr><td>Win+A</td><td>알림 센터</td><td>Win+B</td><td>알림 영역으로 이동</td></tr>
+<tr><td>Win+D</td><td>바탕 화면 표시</td><td>Win+E</td><td>파일 탐색기</td></tr>
+<tr><td><b>Win+F</b></td><td><b>피드백 허브</b> (기출 빈출)</td><td>Win+I</td><td>설정</td></tr>
+<tr><td>Win+L</td><td>컴퓨터 잠금</td><td>Win+M</td><td>모든 창 최소화</td></tr>
+<tr><td>Win+R</td><td>실행 창</td><td>Win+S</td><td>검색</td></tr>
+<tr><td>Win+T</td><td>작업 표시줄 항목 사이 이동</td><td>Win+U</td><td>접근성 설정</td></tr>
+<tr><td>Win+Tab</td><td>작업 보기</td><td>Win + / Win −, Win+Esc</td><td>돋보기 확대·축소, 종료</td></tr>
+</table>
+
+<h3><b>2-4.</b> 작업 표시줄 · 검색 · 폴더 · 압축</h3>
+<ul>
+<li>작업 표시줄: 크기 조절(화면 절반까지), 잠금, 자동 숨기기 — 작업 표시줄 우클릭 → 작업 표시줄 설정. 실제 없는 기능을 오답으로 냄</li>
+<li>검색(Win+S): 프로그램 실행, 웹 주소 이동 가능 / <b>파일 압축·복원은 불가</b></li>
+<li>같은 폴더 안에 같은 이름의 파일·폴더 불가, 파일 이름은 <b>최대 255자</b>, 쓸 수 없는 문자가 있음</li>
+<li>폴더 속성 탭: <b>일반, 공유, 보안, 사용자 지정</b> — 속성 창에서는 폴더 삭제 불가</li>
+<li>압축: 저장 공간 절약, 전송 시간 단축, Windows가 ZIP 압축 기본 제공. 다시 압축해도 계속 줄지는 않음</li>
+</ul>
+
+<div class="point">
+<h3><b>2-5. Part 2</b> 시험 포인트</h3>
+<ul>
+<li>PnP = 자동 인식·설치 불필요, 핫 플러그 = 전원을 끄지 않고 교체</li>
+<li>Alt+Enter 속성, Shift+F10 바로 가기 메뉴, Ctrl+Esc 시작 메뉴, Win+F 피드백 허브</li>
+<li>Print Screen 전체, Alt+Print Screen 활성 창, Shift+Delete 완전 삭제</li>
+</ul>
+</div>
+
+<h2><b>Part 3.</b> 휴지통과 바로 가기 아이콘</h2>
+
+<h3><b>3-1.</b> 휴지통</h3>
+<ul>
+<li>삭제한 파일을 임시 보관, 복원 가능. <b>드라이브마다 하나씩</b></li>
+<li>용량 초과 시: 새 파일은 정상적으로 들어가고, <b>가장 먼저 들어간 파일부터 자동 삭제</b> (<span class="trap">“새 파일은 보관되지 않는다” ✗</span>)</li>
+<li>비어 있을 때와 파일이 있을 때 아이콘 모양이 다름</li>
+<li>휴지통 안의 파일은 <b>이름 변경·실행 불가</b> (복원 후 실행)</li>
+<li>기본 크기는 드라이브 용량의 10% 미만, 사용자가 조정 가능. 속성: 휴지통 선택 후 Alt+Enter</li>
+</ul>
+<table>
+<tr><th>휴지통을 거치지 않고 바로 삭제되는 경우 (복원 불가)</th></tr>
+<tr><td>Shift+Delete · Shift를 누른 채 휴지통으로 드래그 · <b>USB·외장 하드·네트워크 드라이브</b>에서 삭제 · 휴지통 크기 0% · 휴지통 비우기</td></tr>
+</table>
+
+<h3><b>3-2.</b> 바로 가기 아이콘</h3>
+<ul>
+<li>아이콘 왼쪽 아래에 꺾인 화살표, 다른 이름 단축 아이콘, 확장자 <b>.lnk</b></li>
+<li>원본 파일의 <b>경로를 기억</b>하는 아이콘 — 바로 가기를 지워도 원본은 그대로, <b>원본을 지우면 실행 불가</b></li>
+<li>한 원본에 <b>여러 개, 개수 제한 없이</b> 만들 수 있음 (<span class="trap">“하나만 가능” ✗</span>)</li>
+<li>대상: 프로그램, 파일, 폴더, 디스크 드라이브, 프린터 등, 원본과 다른 위치에도 생성 가능</li>
+</ul>
+
+<div class="point">
+<h3><b>3-3. Part 3</b> 시험 포인트</h3>
+<ul>
+<li>휴지통: 드라이브마다 하나, 초과 시 오래된 파일부터 삭제, 이름 변경·실행 불가</li>
+<li>바로 삭제: Shift+Delete, USB·외장·네트워크, 크기 0%</li>
+<li>바로 가기: .lnk, 여러 개 가능, 원본 삭제 시 실행 불가</li>
+</ul>
+</div>
+
+<h2>전체 요약표</h2>
+<table>
+<tr><th>주제</th><th>핵심 내용</th><th>함정</th></tr>
+<tr><td>운영체제 실행</td><td>작동 중 메모리에서 실행</td><td>하드디스크에서 실행 ✗</td></tr>
+<tr><td>성능 평가</td><td>신뢰도·사용 가능도·처리 능력 ↑, 응답 시간 ↓</td><td>응답 시간 높을수록 ✗</td></tr>
+<tr><td>구성</td><td>제어 = 감시·작업·데이터 관리</td><td>언어 번역은 처리 프로그램</td></tr>
+<tr><td>운영 방식</td><td>일괄 처음, 분산 마지막</td><td>듀얼 ↔ 듀플렉스</td></tr>
+<tr><td>Windows 특징</td><td>GUI, 선점형, PnP, 핫 플러그, OLE</td><td>PnP ↔ 핫 플러그</td></tr>
+<tr><td>단축키</td><td>Alt+Enter 속성, Win+F 피드백 허브</td><td>Ctrl+Alt+Del ↔ Ctrl+Shift+Esc</td></tr>
+<tr><td>휴지통</td><td>드라이브마다 하나, 오래된 것부터 삭제</td><td>USB 삭제는 복원 불가</td></tr>
+<tr><td>바로 가기</td><td>.lnk, 여러 개 가능</td><td>하나만 가능 ✗</td></tr>
+</table>
+
+<p class="foot">이 자료는 학습 보조용 요약입니다.</p>
+</body>
+</html>

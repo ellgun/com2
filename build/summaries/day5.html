@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>컴활2급 5일차 핵심정리</title>
+<style>
+  @page { size: A4; margin: 18mm 17mm; }
+  body { font-family: "Malgun Gothic", "맑은 고딕", sans-serif; font-size: 10.5pt; line-height: 1.6; color: #222; }
+  h1 { text-align: center; color: #2f5496; font-size: 20pt; font-weight: normal; margin: 30px 0 6px; }
+  .sub { text-align: center; color: #2f5496; font-size: 13pt; margin-bottom: 18px; }
+  .src { margin: 0 30px 26px; font-size: 10pt; }
+  h2 { color: #4472c4; font-size: 15pt; font-weight: normal; margin: 30px 0 8px; page-break-after: avoid; }
+  h2 b { font-weight: bold; }
+  h3 { color: #4472c4; font-size: 12pt; font-weight: normal; margin: 18px 0 4px; page-break-after: avoid; }
+  h3 b { font-weight: bold; }
+  ul { margin: 4px 0 6px; padding-left: 26px; }
+  li { margin: 2px 0; }
+  table { border-collapse: collapse; width: 100%; margin: 6px 0 8px; font-size: 10pt; page-break-inside: avoid; }
+  th { text-align: left; font-weight: normal; border-bottom: 1px solid #000; padding: 3px 6px; }
+  td { padding: 3px 6px; vertical-align: top; }
+  .trap { color: #c00000; font-weight: bold; }
+  .point { border-bottom: 3px double #555; padding-bottom: 6px; margin-bottom: 10px; }
+  .foot { font-style: italic; margin-top: 30px; font-size: 10pt; }
+  .note { font-size: 9.5pt; color: #555; }
+</style>
+</head>
+<body>
+
+<h1>컴퓨터 활용능력 2급 필기 — 5일차 핵심 정리</h1>
+<div class="sub">컴퓨터 일반: 네트워크 · 인터넷 · 바이러스와 정보 보안</div>
+<p class="src">출처: 강의 3편(5일차 1·2·3)의 YouTube 자막을 직접 추출해 요약·재구성했습니다. (Lilys AI 크레딧 부족으로 이번 회차는 자막 도구 사용) 강의 중 사실과 다른 설명은 바로잡고 표시해 두었습니다.</p>
+
+<!-- ================= PART 1 ================= -->
+<h2><b>Part 1.</b> 네트워크</h2>
+
+<h3><b>1-1.</b> 네트워크 운영 방식</h3>
+<table>
+<tr><th>방식</th><th>특징</th></tr>
+<tr><td>중앙 집중 방식</td><td>모든 데이터 처리·관리를 하나의 중앙 컴퓨터(서버)가 담당</td></tr>
+<tr><td><b>피어 투 피어(P2P)</b><br>= 동배간 처리</td><td>모든 컴퓨터가 <b>서버이자 클라이언트</b>. 서버 없이 자원 공유, 소규모 네트워크에 적합 (예: 메신저로 직접 파일 주고받기)</td></tr>
+<tr><td><b>클라이언트/서버</b></td><td>요청하는 클라이언트와 제공하는 서버가 <b>명확히 분리</b>(손님과 주방). <b>분산 처리</b>에 적합, 보안 관리 쉬움. 서버 구축·유지 비용, 서버 장애 시 서비스 중단</td></tr>
+</table>
+
+<h3><b>1-2.</b> 통신망의 종류</h3>
+<table>
+<tr><th>통신망</th><th>설명</th></tr>
+<tr><td>LAN (근거리)</td><td>건물·회사 등 좁은 지역. 설치 간단, 보안 쉬움, 전송 속도 빠름</td></tr>
+<tr><td>MAN (도시권)</td><td>도시 규모 지역 연결 (LAN보다 넓고 WAN보다 좁음)</td></tr>
+<tr><td>WAN (광역)</td><td>국가·대륙 간 넓은 지역 연결</td></tr>
+<tr><td><b>VAN (부가가치 통신망)</b></td><td>통신 회선에 <b>정보 서비스를 더한</b> 통신망 (예: 카드 결제 중계망). 회선을 보유하거나 임차해 사용</td></tr>
+<tr><td><b>ISDN (종합정보통신망)</b></td><td>전화·팩스·데이터를 <b>하나의 회선으로 통합</b>해 전송</td></tr>
+<tr><td><b>B-ISDN (광대역)</b></td><td>ISDN보다 <b>고속·광대역</b>, 멀티미디어 전송, <b>디지털</b> 방식</td></tr>
+</table>
+<ul>
+<li>크기 순서: WAN > MAN > LAN</li>
+<li><span class="trap">함정</span>: “B-ISDN은 아날로그 방식” ✗ (디지털)</li>
+<li><b>무선 LAN 구성 요소</b>(최근 출제): 단말기, 브리지, 랜카드, 안테나, <b>AP(액세스 포인트)</b> — <b>리피터는 해당 안 됨</b></li>
+</ul>
+
+<h3><b>1-3.</b> 통신 방식</h3>
+<table>
+<tr><th>방식</th><th>설명</th><th>예</th></tr>
+<tr><td>단방향</td><td>한쪽으로만 전송</td><td>라디오, TV</td></tr>
+<tr><td>반이중</td><td>양방향 가능하지만 <b>동시에는 불가</b></td><td>무전기</td></tr>
+<tr><td>전이중</td><td>양방향 <b>동시</b> 송수신</td><td>전화</td></tr>
+</table>
+
+<h3><b>1-4.</b> 네트워크 구성 형태 (그림으로도 출제)</h3>
+<table>
+<tr><th>형태</th><th>특징</th></tr>
+<tr><td><b>성형(스타형)</b></td><td>중앙 허브·스위치에 각 컴퓨터 연결. 설치·확장 쉬움, <b>중앙 장치 고장 시 전체 마비</b></td></tr>
+<tr><td>트리형(계층형)</td><td>성형을 여러 계층으로 확장한 나뭇가지 모양. 대규모 관리 유리, 상위 노드 고장 시 하위 영향</td></tr>
+<tr><td>링형(환형)</td><td>원 모양, 데이터가 한 방향으로 순환. 충돌 적음, 한 곳 고장 시 전체 영향</td></tr>
+<tr><td>버스형</td><td>하나의 공통 케이블에 여러 장치 연결. 설치 간단·비용 적음·추가 삭제 쉬움, 충돌 잦음, <b>기밀성 낮음, 회선 길이 제한</b></td></tr>
+<tr><td><b>망형(메시형)</b></td><td>모든 노드가 서로 직접 연결. 장애 시 우회 경로 → <b>신뢰성 가장 높음</b>, 설치 비용·관리 복잡</td></tr>
+</table>
+<ul><li><span class="trap">함정</span>: “버스형은 기밀 보장이 우수하고 회선 길이 제한이 없다” ✗</li></ul>
+
+<h3><b>1-5.</b> OSI 7계층과 장비</h3>
+<ul><li>ISO가 제정한 네트워크 통신 규약. 순서: <b>물리 → 데이터 링크 → 네트워크 → 전송 → 세션 → 표현 → 응용</b> (특히 2·3·4계층이 자주 출제)</li></ul>
+<table>
+<tr><th>계층</th><th>역할</th><th>장비</th></tr>
+<tr><td>1 물리</td><td>전송 매체의 전기적·물리적 특성 규정</td><td><b>리피터</b>, 허브, 케이블</td></tr>
+<tr><td>2 데이터 링크</td><td>오류 검출, 프레임 단위 전송</td><td><b>브리지</b>, 스위치</td></tr>
+<tr><td>3 네트워크</td><td><b>경로 설정</b></td><td><b>라우터</b></td></tr>
+<tr><td>4 전송</td><td>신뢰성 있는 전송, 포트 번호, 오류 복구</td><td><b>게이트웨이</b></td></tr>
+<tr><td>5~7</td><td>세션 · 표현 · 응용</td><td>—</td></tr>
+</table>
+<ul><li><span class="trap">함정</span>: “OSI 3계층은 데이터 링크” ✗ (네트워크)</li></ul>
+
+<h3><b>1-6.</b> 네트워크 장비 (키워드로 찾기)</h3>
+<table>
+<tr><th>장비</th><th>키워드</th></tr>
+<tr><td><b>라우터</b></td><td>IP 주소 기준 <b>최적의 경로</b>를 찾아 다른 네트워크로 전달</td></tr>
+<tr><td><b>리피터</b></td><td>신호를 재생·<b>증폭</b>해 장거리 전송</td></tr>
+<tr><td><b>브리지</b></td><td>같은 프로토콜을 쓰는 LAN과 LAN을 <b>연결</b>(다리)</td></tr>
+<tr><td><b>게이트웨이</b></td><td>다른 네트워크로 들어가는 <b>출입구</b>(문)</td></tr>
+<tr><td>허브</td><td>여러 컴퓨터를 연결해 회선을 통합 관리</td></tr>
+<tr><td>DNS</td><td>도메인 이름 ↔ IP 주소 변환</td></tr>
+<tr><td>모뎀</td><td>디지털 ↔ 아날로그 신호 변환</td></tr>
+</table>
+<ul><li><span class="trap">함정</span>: “브리지는 디지털 신호를 아날로그로 변환” ✗ (모뎀)</li></ul>
+
+<h3><b>1-7.</b> 네트워크 명령어 (명령 프롬프트 cmd)</h3>
+<table>
+<tr><th>명령어</th><th>기능</th></tr>
+<tr><td><b>ipconfig</b></td><td>내 IP 주소, 서브넷 마스크, 기본 게이트웨이 확인</td></tr>
+<tr><td><b>tracert</b></td><td>목적지 서버까지의 <b>경로 추적</b></td></tr>
+<tr><td><b>ping</b></td><td>IP·도메인에 <b>접속 가능한지</b>, 왕복 시간 확인</td></tr>
+</table>
+
+<h3><b>1-8.</b> 프로토콜</h3>
+<ul><li>서로 다른 컴퓨터가 통신하기 위해 약속한 규칙. 기능: 흐름 제어, 동기화, 오류 제어</li></ul>
+<table>
+<tr><th>프로토콜</th><th>키워드</th></tr>
+<tr><td><b>TCP</b></td><td>데이터를 패킷으로 나눠 전송, 흐름·오류 제어 (전송 계층) — 인터넷 기본 규약 TCP/IP</td></tr>
+<tr><td><b>IP</b></td><td>주소 지정, 경로 설정 (네트워크 계층)</td></tr>
+<tr><td>HTTP</td><td>웹 서버와 브라우저 사이 <b>하이퍼텍스트(HTML)</b> 전송</td></tr>
+<tr><td><b>DHCP</b></td><td>IP 주소를 <b>자동(동적)으로 할당</b></td></tr>
+<tr><td><b>FTP</b></td><td><b>파일</b> 업로드·다운로드 (원격 파일 전송)</td></tr>
+<tr><td>ARP</td><td>IP 주소로 물리 주소(<b>MAC 주소</b>) 찾기</td></tr>
+<tr><td>ICMP</td><td>네트워크 상태 점검·오류 전달, <b>ping</b>에 사용</td></tr>
+<tr><td>SNMP</td><td>라우터·스위치 등 네트워크 장비 관리</td></tr>
+<tr><td>WAP</td><td>무선 인터넷 규약</td></tr>
+<tr><td>TELNET</td><td><b>원격</b>으로 다른 컴퓨터 접속·조작</td></tr>
+</table>
+<ul>
+<li><b>FTP</b>: 사이트 계정이 필요, 업로드·다운로드·삭제·이름 변경 가능, 바이너리·ASCII 모드 제공. <span class="trap">함정</span>: “FTP 서버의 응용 프로그램을 바로 실행할 수 있다” ✗ (다운로드 후 실행)</li>
+</ul>
+
+<h3><b>1-9.</b> 전자우편 프로토콜 (4가지 모두 중요)</h3>
+<table>
+<tr><th>프로토콜</th><th>역할</th></tr>
+<tr><td><b>SMTP</b></td><td>메일 <b>보내기</b></td></tr>
+<tr><td><b>POP3</b></td><td>메일 <b>받기</b> (서버에서 내 컴퓨터로 가져오기)</td></tr>
+<tr><td><b>MIME</b></td><td>이미지·오디오·영상·첨부 파일 등 <b>멀티미디어</b> 메일</td></tr>
+<tr><td><b>IMAP</b></td><td>메일을 서버에 남겨 둔 채 읽고 관리·검색, 여러 기기에서 접근</td></tr>
+</table>
+<ul>
+<li>전자우편 주소: 아이디@도메인 · 여러 사람에게 동시 발송 가능</li>
+<li><b>전달(Forward)</b> = 받은 메일을 다른 사람에게 그대로 보내기 / <b>회신(Reply)</b> = 보낸 사람에게 답장. <span class="trap">함정</span>: 답장을 “전달”이라고 한 보기 ✗</li>
+</ul>
+
+<div class="point">
+<h3><b>1-10. Part 1</b> 시험 포인트</h3>
+<ul>
+<li>P2P = 서버이자 클라이언트, 클라이언트/서버 = 역할 분리·분산 처리</li>
+<li>VAN = 서비스 추가, ISDN = 하나의 회선으로 통합, B-ISDN = 고속·디지털</li>
+<li>성형 = 중앙 고장 시 전체 마비, 망형 = 신뢰성 최고</li>
+<li>OSI: 물리-리피터, 데이터링크-브리지, 네트워크-라우터, 전송-게이트웨이</li>
+<li>ipconfig = IP 확인, tracert = 경로 추적, ping = 접속 확인</li>
+<li>DHCP = IP 자동 할당, FTP = 파일 전송, SMTP 보내기 / POP3 받기</li>
+</ul>
+</div>
+
+<!-- ================= PART 2 ================= -->
+<h2><b>Part 2.</b> 인터넷</h2>
+
+<h3><b>2-1.</b> 인터넷 관련 용어</h3>
+<table>
+<tr><th>용어</th><th>설명</th></tr>
+<tr><td>WWW</td><td>웹 브라우저로 인터넷을 이용하게 해 주는 서비스</td></tr>
+<tr><td>캐싱</td><td>방문한 웹 페이지 정보를 임시 저장했다가 다음 접속 때 빠르게 표시</td></tr>
+<tr><td><b>쿠키</b></td><td>방문 기록·로그인 정보를 저장한 파일 → 다시 접속 시 자동 로그인 (자주 출제)</td></tr>
+<tr><td>즐겨찾기(북마크) · 히스토리</td><td>자주 가는 주소 저장 / 방문 기록</td></tr>
+<tr><td><b>미러 사이트</b></td><td>접속자가 많거나 먼 곳의 속도 저하를 막으려고 <b>원본과 같은 내용을 허가하에 복제</b>한 사이트</td></tr>
+<tr><td>링크 사이트</td><td>자체 콘텐츠 없이 다른 사이트로 연결해 주는 사이트</td></tr>
+<tr><td>플러그인</td><td>웹 브라우저 등에 기능을 추가하는 작은 보조 프로그램</td></tr>
+<tr><td><b>인트라넷</b></td><td>회사·기관 <b>내부 전용</b> 네트워크</td></tr>
+<tr><td>엑스트라넷</td><td>인트라넷을 확장해 <b>협력 업체</b>까지 제한적으로 접속</td></tr>
+<tr><td>유즈넷</td><td>공통 관심사를 가진 사용자의 토론 서비스</td></tr>
+<tr><td>블루투스</td><td>근거리 무선 통신 (무선 마우스·이어폰)</td></tr>
+<tr><td>이더넷</td><td>가장 일반적인 유선 LAN 기술</td></tr>
+</table>
+
+<h3><b>2-2.</b> 인터넷 서비스</h3>
+<table>
+<tr><th>서비스</th><th>설명</th></tr>
+<tr><td><b>VoIP</b></td><td>인터넷으로 음성 통화 (인터넷 전화)</td></tr>
+<tr><td><b>mVoIP</b></td><td>와이파이·3G·LTE 등 <b>무선망</b>으로 하는 인터넷 전화</td></tr>
+<tr><td>클라우드 컴퓨팅</td><td>서버·저장소·소프트웨어를 인터넷으로 필요할 때 빌려 씀</td></tr>
+<tr><td><b>VPN</b></td><td>가상 사설망. 인터넷에서 <b>암호화된 터널</b>로 사설망에 안전하게 접속</td></tr>
+<tr><td>RSS</td><td>웹사이트의 새 소식을 자동으로 받아 보는 형식</td></tr>
+<tr><td><b>IPTV</b></td><td>인터넷망으로 실시간 방송·VOD 제공 (셋톱박스)</td></tr>
+<tr><td><b>LBS</b></td><td>위치 기반 서비스 (GPS·와이파이로 현재 위치 파악 → 지도·길찾기)</td></tr>
+<tr><td>와이브로</td><td>이동 중에도 쓰는 무선 휴대 인터넷</td></tr>
+<tr><td><b>테더링</b></td><td>스마트폰을 공유기처럼 써서 다른 기기에서 인터넷 사용</td></tr>
+<tr><td>핫스팟</td><td>무선 인터넷을 쓸 수 있는 장소·기능</td></tr>
+<tr><td>로밍</td><td>해외에서도 내 휴대폰으로 통화·데이터 이용</td></tr>
+</table>
+
+<h3><b>2-3.</b> 최신 IT 기술</h3>
+<table>
+<tr><th>기술</th><th>설명</th></tr>
+<tr><td><b>IoT (사물 인터넷)</b></td><td>사물·사람·공간을 인터넷으로 연결해 데이터를 수집·분석·판단하고 지능화된 서비스를 자율 제공</td></tr>
+<tr><td><b>빅데이터</b></td><td>대용량·다양성·고속으로 생성되는 방대한 데이터와 그 분석 기술</td></tr>
+<tr><td>메타버스</td><td>가상과 현실이 융합된 3차원 공간에서 아바타로 활동</td></tr>
+<tr><td>블록체인</td><td>거래 기록을 여러 컴퓨터에 <b>분산 저장</b>해 위·변조 방지</td></tr>
+<tr><td>AI · ChatGPT</td><td>인간의 학습·판단 능력을 모방 / OpenAI의 대화형 언어 모델</td></tr>
+<tr><td>유비쿼터스</td><td>언제 어디서나 네트워크에 접속할 수 있는 환경</td></tr>
+<tr><td><b>RFID</b></td><td>무선 주파수로 사물에 붙은 <b>전자 태그</b> 정보를 비접촉 인식 (출입 통제, 도서 대출)</td></tr>
+<tr><td><b>NFC</b></td><td><b>10cm 이내</b> 근거리 무선 통신 (모바일 결제, 교통카드)</td></tr>
+<tr><td><b>USN</b></td><td><b>센서</b>로 정보를 수집해 네트워크로 실시간 전송·관리 (스마트팜, 산불·홍수 감지)</td></tr>
+<tr><td>텔레매틱스</td><td>차량에 정보통신을 접목 (교통·위치·긴급 구조)</td></tr>
+</table>
+<ul><li><span class="trap">함정</span>: “IoT는 통신 비용이 절감되고 보안 적용이 쉽다” ✗ (통신 비용 증가, 보안이 아직 과제)</li></ul>
+
+<h3><b>2-4.</b> IP 주소: IPv4 vs IPv6 (IPv6 자주 출제)</h3>
+<table>
+<tr><th>구분</th><th>IPv4</th><th>IPv6</th></tr>
+<tr><td>길이</td><td><b>32비트</b></td><td><b>128비트</b></td></tr>
+<tr><td>표기</td><td>8비트씩 4부분, <b>점(.)</b>으로 구분</td><td><b>16비트씩 8부분</b>, 16진수, <b>콜론(:)</b>으로 구분</td></tr>
+<tr><td>클래스</td><td>A~E 클래스</td><td><b>클래스 구분 없음</b></td></tr>
+<tr><td>보안</td><td>별도 프로토콜 필요</td><td><b>인증·암호화 기능 내장</b></td></tr>
+<tr><td>기타</td><td>주소 부족</td><td>IPv4 주소 부족 해결, IPv4와 호환성 높음, 연속된 0 생략 가능(::), <b>유니캐스트·멀티캐스트·애니캐스트</b></td></tr>
+</table>
+<ul><li><span class="trap">함정</span>: “IPv6는 8비트씩 16부분” ✗ · “IPv6는 A~E 클래스” ✗ · 현재는 IPv4와 IPv6를 함께 사용하며 점차 IPv6로 전환 중</li></ul>
+
+<h3><b>2-5.</b> 도메인 · DNS · URL</h3>
+<ul>
+<li><b>도메인 네임</b>: 숫자 IP 주소를 사람이 기억하기 쉬운 문자로 표현. 전 세계에서 <b>유일</b>. 도메인 ≠ IP 주소 (DNS가 변환)</li>
+<li>관리 기관: 한국 <b>KISA</b>(한국인터넷진흥원), 국제 <b>ICANN</b></li>
+<li><span class="trap">함정</span>: “인터넷은 중앙 통제 기구(인터닉)가 운영” ✗</li>
+</ul>
+<table>
+<tr><th>기관 도메인</th><th>의미</th><th>학교 도메인</th><th>의미</th></tr>
+<tr><td>go</td><td>정부 기관</td><td><b>kg</b></td><td>유치원</td></tr>
+<tr><td>or</td><td>비영리 기관</td><td><b>es</b></td><td>초등학교</td></tr>
+<tr><td>mil</td><td>군사 기관</td><td>ms</td><td>중학교</td></tr>
+<tr><td>re</td><td>연구 기관</td><td><b>hs</b></td><td>고등학교</td></tr>
+<tr><td>co</td><td>영리 기관(기업)</td><td>ac</td><td>대학</td></tr>
+<tr><td>ne</td><td>네트워크</td><td>sc</td><td>기타 학교</td></tr>
+<tr><td>pe</td><td>개인</td><td></td><td></td></tr>
+</table>
+<ul><li><b>URL</b>: 인터넷 자원(문서·이미지·동영상)의 정확한 위치. 형식: <b>프로토콜://호스트 서버 주소[:포트 번호][/파일 경로]</b> (도메인이 집이라면 URL은 집까지 가는 전체 경로)</li></ul>
+
+<div class="point">
+<h3><b>2-6. Part 2</b> 시험 포인트</h3>
+<ul>
+<li>쿠키 = 자동 로그인, 미러 사이트 = 허가하에 복제, 인트라넷 = 내부 / 엑스트라넷 = 협력사</li>
+<li>VoIP 인터넷 전화, mVoIP 무선망, VPN 암호화 터널, LBS 위치 기반, 테더링 = 스마트폰 공유</li>
+<li>RFID 전자 태그, NFC 10cm, USN 센서</li>
+<li>IPv6 = 128비트·16비트씩 8부분·콜론·클래스 없음·보안 내장</li>
+<li>KISA / ICANN, kg 유치원 · es 초등 · hs 고등</li>
+</ul>
+</div>
+
+<!-- ================= PART 3 ================= -->
+<h2><b>Part 3.</b> 바이러스와 정보 보안</h2>
+
+<h3><b>3-1.</b> 바이러스 예방</h3>
+<ul>
+<li>방화벽 설치, 최신 백신 사용·주기적 검사</li>
+<li>출처가 불분명한 메일은 <b>열지 않고 바로 삭제</b> (<span class="trap">“열어 보고 삭제”, “본문 확인 후 삭제”</span> ✗)</li>
+<li>네트워크 공유 폴더는 <b>읽기 전용</b>, 다운로드한 파일은 실행 전 검사</li>
+<li><span class="trap">함정</span>: “첨부 파일을 다른 이름으로 저장해 사용한다”는 예방법이 아님</li>
+</ul>
+
+<h3><b>3-2.</b> 악성 프로그램 종류</h3>
+<table>
+<tr><th>종류</th><th>한 줄 정리</th><th>설명</th></tr>
+<tr><td><b>웜</b></td><td>자기 복제</td><td>스스로 복제해 네트워크로 퍼지며 시스템을 느리게·다운. 예: <b>DDoS, 버퍼 오버플로, 슬래머</b></td></tr>
+<tr><td><b>트로이 목마</b></td><td>숨어서 실행</td><td>정상 프로그램으로 위장, 실행되면 악성 행위. <b>자기 복제 능력 없음</b></td></tr>
+<tr><td>랜섬웨어</td><td>금전 요구</td><td>파일을 암호화하고 복구 대가로 돈 요구</td></tr>
+<tr><td>스파이웨어</td><td>정보 수집</td><td>몰래 설치되어 개인 정보·사용 기록 수집</td></tr>
+<tr><td>드로퍼</td><td>악성 코드 전달</td><td>다른 악성 코드를 몰래 설치·실행</td></tr>
+<tr><td><b>매크로 바이러스</b></td><td>문서 감염</td><td>엑셀·워드 등의 매크로로 감염·확산</td></tr>
+<tr><td>부트 / 파일 / 부트·파일 바이러스</td><td>—</td><td>부트 섹터 감염 / 실행 파일(EXE·COM) 감염 / 둘 다 감염</td></tr>
+</table>
+<ul><li><span class="trap">함정</span>: 웜의 형태가 아닌 것 = 트로이 목마</li></ul>
+
+<h3><b>3-3.</b> 방화벽 · 프록시 서버</h3>
+<ul>
+<li><b>방화벽</b>: 외부와 내부 네트워크 사이에서 <b>외부의 불법 접근·해킹을 차단</b>. 허가된 사용자만 접속, 안전한 통신, 로그로 침입 역추적 가능</li>
+<li>방화벽의 한계: <b>내부 사용자의 불법 행위는 막지 못함</b>, 메일 바이러스·피싱·악성 코드 감염 차단 어려움</li>
+<li><span class="trap">함정</span>: “방화벽이 바이러스 감염을 인지해 알려 준다” ✗ (백신의 역할)</li>
+<li><b>프록시 서버</b>: 클라이언트와 인터넷 서버 사이의 <b>중계(대리) 서버</b>. <b>캐시 + 방화벽</b> 기능 → 내 IP를 숨겨 보안 강화, 자주 쓰는 정보 저장으로 속도 향상</li>
+</ul>
+
+<h3><b>3-4.</b> 정보 사회의 역기능</h3>
+<ul>
+<li>정보 범죄 증가, 유해 정보 확산, 개인 정보 침해, 인터넷 중독, <b>정보 격차 심화</b>, 서버 장애로 인한 사회적 혼란</li>
+<li>건강 문제: <b>테크노 스트레스</b>(새 기술에 적응하지 못해 생기는 정신적 스트레스), <b>VDT 증후군</b>(장시간 사용으로 목·어깨·허리 통증, 시력 저하)</li>
+<li><span class="trap">함정</span>: “정보 편중으로 계층 간 정보 차이를 줄일 수 있다” ✗</li>
+<li>예방: 비밀번호 주기적 변경, 백신 자동 업데이트, Windows 업데이트 자동 설치, <b>정크 메일(스팸)</b>은 본문 확인 없이 즉시 삭제</li>
+</ul>
+
+<h3><b>3-5.</b> 데이터 보안 침해 형태</h3>
+<table>
+<tr><th>형태</th><th>설명</th><th>침해 요소</th></tr>
+<tr><td><b>가로막기</b></td><td>데이터가 수신자에게 전달되는 것을 방해</td><td><b>가용성</b> (필요할 때 언제든 이용)</td></tr>
+<tr><td><b>가로채기</b></td><td>전송 중인 데이터를 제3자가 몰래 보거나 도청</td><td><b>기밀성</b> (허가된 사람만 접근)</td></tr>
+<tr><td>수정(변조)</td><td>전송된 데이터를 다른 내용으로 바꿈</td><td rowspan="2"><b>무결성</b> (변경·훼손 없이 올바른 상태 유지)</td></tr>
+<tr><td>위조</td><td>정당한 송신자가 보낸 것처럼 가짜 데이터를 만듦</td></tr>
+</table>
+
+<h3><b>3-6.</b> 정보 보안 위협 (한 줄 암기)</h3>
+<table>
+<tr><th>용어</th><th>한 줄 정리</th><th>설명</th></tr>
+<tr><td>해킹</td><td>불법 침입</td><td>시스템에 불법으로 침입해 데이터 파괴·조작</td></tr>
+<tr><td>백도어</td><td>해커가 이용하는 열린 문</td><td>유지보수용 비밀 통로가 침입 경로로 악용</td></tr>
+<tr><td>트랩도어</td><td>개발자가 숨겨 둔 비밀 문</td><td>개발 단계에서 숨겨 둔 출입구, 발견 어려움</td></tr>
+<tr><td><b>피기배킹</b></td><td>남의 컴퓨터 몰래 쓰기</td><td>로그인한 채 자리를 비운 사이 비인가자가 작업</td></tr>
+<tr><td><b>스푸핑</b></td><td><b>속임수</b> (“~우” 끝 = 속임)</td><td>신뢰할 수 있는 사용자·사이트인 것처럼 속여 정보 가로챔</td></tr>
+<tr><td><b>스니핑</b></td><td><b>엿보기</b> (“~이” 끝 = 엿보기)</td><td>네트워크에서 아이디·비밀번호를 몰래 엿봄</td></tr>
+<tr><td>DDoS</td><td>서버 마비</td><td>여러 PC로 동시에 접속해 서버를 마비</td></tr>
+<tr><td><b>피싱</b></td><td>속여서 낚기</td><td>가짜 사이트·메일로 금융 정보·비밀번호 입력 유도</td></tr>
+<tr><td><b>키로거</b></td><td>키 입력 훔치기</td><td>키보드 입력을 몰래 기록해 계정 정보 탈취</td></tr>
+<tr><td>워 드라이빙</td><td>이동하며 와이파이 탐색</td><td>차량으로 이동하며 무선 네트워크 정보 수집</td></tr>
+<tr><td>허니팟</td><td>해커 유인용 미끼</td><td>공격 분석용으로 일부러 만든 가짜 시스템</td></tr>
+<tr><td>스팸</td><td>광고 대량 발송</td><td>원치 않는 광고 메일·메시지 (= 정크 메일)</td></tr>
+</table>
+<p class="note">※ 교재에 따라 백도어와 트랩도어를 같은 뜻(시스템에 몰래 들어가는 비밀 통로)으로 설명하기도 합니다.</p>
+
+<div class="point">
+<h3><b>3-7. Part 3</b> 시험 포인트</h3>
+<ul>
+<li>의심 메일은 열지 않고 삭제, 공유 폴더는 읽기 전용</li>
+<li>웜 = 자기 복제(DDoS·버퍼 오버플로·슬래머), 트로이 목마 = 위장·복제 안 함, 매크로 = 문서</li>
+<li>방화벽 = 외부 침입 차단, 내부 사용자는 못 막음, 바이러스 알림 기능 없음</li>
+<li>가로막기 = 가용성, 가로채기 = 기밀성, 수정·위조 = 무결성</li>
+<li>스푸핑 = 속임, 스니핑 = 엿보기, 피기배킹 = 자리 비운 사이, 키로거 = 키 입력</li>
+</ul>
+</div>
+
+<!-- ================= SUMMARY ================= -->
+<h2>전체 요약표</h2>
+<table>
+<tr><th>주제</th><th>핵심 키·내용</th><th>함정</th></tr>
+<tr><td>운영 방식</td><td>P2P 서버이자 클라이언트 / C·S 분리·분산 처리</td><td>분산 처리 = 클라이언트/서버</td></tr>
+<tr><td>통신망</td><td>VAN 서비스 추가, ISDN 통합, B-ISDN 고속</td><td>B-ISDN 아날로그 ✗</td></tr>
+<tr><td>무선 LAN</td><td>단말기·브리지·랜카드·안테나·AP</td><td>리피터 ✗</td></tr>
+<tr><td>구성 형태</td><td>성형 중앙 마비, 망형 신뢰성 최고</td><td>버스형 기밀성 우수 ✗</td></tr>
+<tr><td>OSI 장비</td><td>리피터·브리지·라우터·게이트웨이 (1~4계층)</td><td>3계층 = 네트워크</td></tr>
+<tr><td>명령어</td><td>ipconfig·tracert·ping</td><td>—</td></tr>
+<tr><td>프로토콜</td><td>DHCP 자동 할당, FTP 파일, ARP MAC, ICMP ping, TELNET 원격</td><td>FTP 서버에서 바로 실행 ✗</td></tr>
+<tr><td>메일</td><td>SMTP 보내기, POP3 받기, MIME 멀티미디어, IMAP 서버 관리</td><td>전달 ↔ 회신</td></tr>
+<tr><td>인터넷 용어</td><td>쿠키 자동 로그인, 미러 사이트 복제</td><td>—</td></tr>
+<tr><td>서비스</td><td>mVoIP 무선, VPN 암호화 터널, LBS 위치, 테더링</td><td>—</td></tr>
+<tr><td>최신 기술</td><td>IoT, 빅데이터, RFID 태그, NFC 10cm, USN 센서</td><td>IoT 비용 절감 ✗</td></tr>
+<tr><td>IPv6</td><td>128비트, 16비트×8, 콜론, 클래스 없음</td><td>8비트×16 ✗</td></tr>
+<tr><td>도메인</td><td>KISA·ICANN, kg·es·ms·hs·ac</td><td>고등학교 sc ✗</td></tr>
+<tr><td>URL</td><td>프로토콜://호스트[:포트][/경로]</td><td>—</td></tr>
+<tr><td>악성 코드</td><td>웜 복제, 트로이 위장, 랜섬웨어 금전</td><td>트로이 목마는 웜 아님</td></tr>
+<tr><td>방화벽 / 프록시</td><td>외부 차단 / 중계·캐시</td><td>내부·바이러스 알림 ✗</td></tr>
+<tr><td>보안 침해</td><td>가로막기 가용성, 가로채기 기밀성, 수정·위조 무결성</td><td>가로막기 ↔ 가로채기</td></tr>
+<tr><td>보안 위협</td><td>스푸핑 속임, 스니핑 엿보기, 피싱 낚기</td><td>스푸핑 ↔ 스니핑</td></tr>
+</table>
+
+<p class="foot">이 자료는 학습 보조용 요약입니다. 시험 출제 범위와 세부 기능은 교재와 기출문제로 함께 확인하세요.</p>
+
+</body>
+</html>
