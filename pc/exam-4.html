@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>컴퓨터 일반 모의고사 4회 | 컴활2급</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header class="site-head"><div class="wrap">
+  <a class="brand" href="../index.html">컴활2급</a>
+  <span class="crumbs"><a href="../index.html">전체</a> › <a href="index.html">컴퓨터 일반</a> › 모의고사 4회</span>
+</div></header>
+<main class="wrap">
+<section id="intro">
+  <section class="hero">
+    <h1>컴퓨터 일반 모의고사 4회</h1>
+    <p>2023년 제1회 컴퓨터활용능력 2급 필기 기출 (1과목 컴퓨터 일반)</p>
+  </section>
+  <div class="cbt-intro">
+    <dl>
+      <dt>문항 수</dt><dd>20문제 (4지선다)</dd>
+      <dt>제한 시간</dt><dd>20분</dd>
+      <dt>합격 기준</dt><dd>과목당 60점 이상 (평균 60점 이상)</dd>
+    </dl>
+    <ul>
+      <li>한 화면에 한 문제씩 나옵니다. 보기를 누르면 답이 표기되고, 같은 보기를 다시 누르면 취소됩니다.</li>
+      <li>답안 표기란에서 문제 번호를 눌러 바로 이동할 수 있습니다. (키보드: 1~4 답 선택, ← → 이동)</li>
+      <li>시간이 끝나면 표기한 답안으로 자동 채점됩니다. 풀던 내용은 이 기기에 저장되어 이어 풀 수 있습니다.</li>
+      <li>기출 풀이 강의 영상의 문제 낭독과 해설을 바탕으로 문제와 보기를 복원했습니다. 9번의 오답 보기는 영상에 나오지 않아 임의로 구성했으며, 실제 시험지와 표현·보기 순서가 조금 다를 수 있습니다.</li>
+    </ul>
+    <button class="btn" id="start" type="button">시험 시작</button>
+    <div class="cbt-resume" id="resume" hidden><span id="resume-info"></span><button class="btn ghost" id="resume-btn" type="button">이어서 풀기</button></div>
+  </div>
+</section>
+
+<section id="exam" hidden>
+  <div class="cbt-top">
+    <span class="title">컴퓨터 일반 모의고사 4회</span>
+    <span class="timer" id="timer" title="남은 시간">00:00</span>
+    <span class="left-wrap" id="left-wrap">안 푼 문제 <b id="left">0</b></span>
+    <span class="font-ctl"><button class="chip" id="font-down" type="button" aria-label="글자 작게">가-</button><button class="chip" id="font-up" type="button" aria-label="글자 크게">가+</button></span>
+    <button class="chip" id="sheet-toggle" type="button">답안 표기란</button>
+  </div>
+  <div class="cbt-body">
+    <div class="cbt-main">
+      <div class="cbt-qhead"><span class="num" id="q-num">1</span><span>번</span><span class="prog" id="progress"></span></div>
+      <p id="q-text"></p>
+      <div class="cbt-opts" id="q-opts"></div>
+      <div class="cbt-nav">
+        <button class="btn ghost" id="prev" type="button">‹ 이전</button>
+        <button class="btn" id="next" type="button">다음 ›</button>
+      </div>
+    </div>
+    <aside class="cbt-sheet">
+      <h2>답안 표기란 <button class="chip" id="sheet-close" type="button">닫기</button></h2>
+      <div class="sheet-grid" id="sheet-grid"></div>
+      <button class="btn" id="submit" type="button">답안 제출</button>
+    </aside>
+  </div>
+</section>
+
+<dialog class="cbt-dialog" id="confirm">
+  <p id="confirm-msg"></p>
+  <div class="row"><button class="btn ghost" id="confirm-no" type="button">계속 풀기</button><button class="btn" id="confirm-yes" type="button">제출하기</button></div>
+</dialog>
+
+<section id="result" hidden>
+  <section class="hero"><h1>채점 결과</h1><p>컴퓨터 일반 모의고사 4회 — 2023년 제1회 컴퓨터활용능력 2급 필기 기출 (1과목 컴퓨터 일반)</p></section>
+  <div class="score-card" id="score"></div>
+  <div class="sheet-grid result-grid" id="result-grid"></div>
+  <div class="quiz-actions">
+    <label><input type="checkbox" id="wrong-only"> 틀린 문제만 보기</label>
+    <button class="btn ghost" id="retry" type="button">다시 풀기</button>
+    <a href="index.html">컴퓨터 일반 목록</a>
+  </div>
+  <ol class="quiz-list" id="review"></ol>
+</section>
+<script id="exam-data" type="application/json">{"id":"pc-4","minutes":20,"questions":[{"q":"다음 중 인터넷을 이용한 전자우편에 대한 설명으로 옳지 않은 것은?","o":["일반적으로 SMTP는 메일을 수신하는 용도로, MIME는 송신하는 용도로 사용되는 프로토콜이다.","전자우편 주소는 '사용자 ID@호스트 주소'의 형식으로 이루어진다.","인터넷에 접속하여 서로 편지를 주고받을 수 있는 서비스를 말한다.","POP3를 이용하면 전자 메일 클라이언트를 통해 전자 메일을 받아 볼 수 있다."],"a":0,"e":"SMTP는 메일을 보낼 때(송신) 쓰는 프로토콜이고, MIME는 이미지·동영상·첨부 파일 같은 멀티미디어 메일을 위한 확장 형식입니다. 메일 수신은 POP3·IMAP입니다."},{"q":"다음 중 한글 Windows의 스풀(SPOOL) 기능에 대한 설명으로 옳지 않은 것은?","o":["스풀 기능을 설정하면 인쇄 속도가 빨라지고 동시 작업 처리도 가능하다.","인쇄할 내용을 하드디스크 장치에 임시로 저장한 후에 인쇄 작업을 수행한다.","컴퓨터 내부 장치에 비해 상대적으로 처리 속도가 느린 프린터 작업을 효율적으로 처리하기 위해 사용하는 기능이다.","스풀 기능을 선택하면 문서 전체 또는 일부를 스풀한 후에 인쇄를 시작하도록 선택할 수 있다."],"a":0,"e":"스풀을 쓰면 인쇄 중에도 다른 작업을 할 수 있을 뿐, 프린터의 인쇄 속도 자체가 빨라지지는 않습니다."},{"q":"다음 중 네트워크 주변을 지나다니는 패킷을 엿보면서 계정과 비밀번호를 알아내는 보안 위협 행위는?","o":["키로거(Key Logger)","백도어(Back Door)","스니핑(Sniffing)","스푸핑(Spoofing)"],"a":2,"e":"'패킷을 엿본다'면 스니핑입니다. 키로거는 키보드 입력 기록, 백도어는 몰래 드나드는 뒷문, 스푸핑은 다른 사람인 척 속이는 행위입니다."},{"q":"다음 중 누산기(Accumulator)에 대한 설명으로 옳은 것은?","o":["연산의 결과를 일시적으로 기억하는 장치이다.","명령을 해독하는 장치이다.","명령어를 기억하는 장치이다.","다음에 실행할 명령의 주소를 기억하는 장치이다."],"a":0,"e":"누산기는 연산 결과를 임시로 저장하는 레지스터입니다. ②는 명령 해독기, ③은 명령 레지스터, ④는 프로그램 카운터입니다."},{"q":"다음 중 정보의 기밀성을 저해하는 데이터 보안 침해 형태는?","o":["가로채기","수정","위조","가로막기"],"a":0,"e":"가로채기는 기밀성, 수정·위조는 무결성, 가로막기는 가용성을 침해합니다."},{"q":"다음 중 컴퓨터 범죄에 해당하지 않는 것은?","o":["전산망을 이용해 개인 정보를 유출한다.","전자 문서를 불법으로 복사한다.","인터넷 쇼핑몰에서 상품 가격을 비교하여 가격 비교표를 작성한다.","해킹을 통해 중요한 정보를 위조하거나 변조한다."],"a":2,"e":"상품 가격 비교는 합법적인 소비자 행동입니다. 나머지는 개인 정보 유출, 저작권 침해, 정보 위·변조로 컴퓨터 범죄입니다."},{"q":"다음 중 현재 수행 중인 명령어의 내용을 기억하는 레지스터는?","o":["명령 해독기(Decoder)","프로그램 계수기(PC)","명령 레지스터(IR)","부호기(Encoder)"],"a":2,"e":"명령 레지스터는 현재 실행 중인 명령어를, 프로그램 계수기는 다음에 실행할 명령어의 주소를 기억합니다."},{"q":"다음 중 디지털 컴퓨터의 특징에 대한 설명으로 옳지 않은 것은?","o":["부호화된 숫자, 문자, 이산 데이터 등을 사용한다.","산술·논리 연산을 주로 수행한다.","증폭 회로를 사용한다.","연산 속도가 아날로그 컴퓨터보다 느리다."],"a":2,"e":"디지털 컴퓨터는 논리 회로를 사용합니다. 증폭 회로는 아날로그 컴퓨터의 특징입니다."},{"q":"다음 중 정보 통신망을 범위에 따라 작은 것부터 큰 순서로 바르게 나열한 것은?","o":["MAN – LAN – WAN","LAN – MAN – WAN","WAN – MAN – LAN","LAN – WAN – MAN"],"a":1,"e":"LAN(근거리, 건물·회사) → MAN(도시권) → WAN(광역, 국가·대륙) 순으로 넓어집니다."},{"q":"다음 중 폴더의 [속성] 창에 대한 설명으로 옳지 않은 것은?","o":["폴더의 저장 위치를 변경할 수 있다.","폴더 안에 있는 파일의 개수를 확인할 수 있다.","읽기 전용과 숨김 속성을 설정하거나 해제할 수 있다.","폴더를 만든 날짜를 알 수 있다."],"a":0,"e":"속성 창에서는 위치를 확인만 할 수 있고, 저장 위치를 바꾸려면 파일 탐색기에서 폴더를 이동해야 합니다."},{"q":"다음 중 한글 Windows의 바로 가기 키와 기능의 연결이 옳지 않은 것은?","o":["F2 : 선택한 항목의 이름 바꾸기","F3 : 파일이나 폴더 검색","F4 : 파일 탐색기에서 주소 표시줄 목록 표시","F5 : 창이나 바탕 화면의 화면 요소들을 순환"],"a":3,"e":"F5는 새로 고침입니다. 창이나 바탕 화면의 화면 요소들을 순환하는 키는 F6입니다."},{"q":"다음 중 컴퓨터 운영체제에 대한 설명으로 옳지 않은 것은?","o":["운영체제의 평가 항목으로 처리 능력, 응답 시간, 사용 가능도, 신뢰도 등이 있다.","사용자들 간의 하드웨어 공동 사용 및 자원의 스케줄링을 수행한다.","운영체제는 컴퓨터가 작동하는 동안 하드디스크에 위치하여 실행된다.","프로세스, 기억장치, 주변장치, 파일 등의 관리가 주요 기능이다."],"a":2,"e":"운영체제는 하드디스크에 저장되어 있다가 컴퓨터가 작동하는 동안에는 주기억장치(RAM)에 올라와 실행됩니다."},{"q":"다음 중 인터넷상의 정보나 서비스에 대해 접근 방법, 존재 위치, 자료 파일명 등의 요소를 표시하는 것은?","o":["DHCP","CGI","DNS","URL"],"a":3,"e":"URL은 프로토콜(접근 방법), 서버 주소(위치), 파일 경로를 담은 인터넷 주소입니다. DHCP는 IP 자동 할당, CGI는 웹 서버의 요청 처리 프로그램, DNS는 도메인을 IP로 변환합니다."},{"q":"다음 중 웹상에서 효과적으로 정보를 나타내기 위해 문서와 문서를 연결하여 관련된 정보를 손쉽게 찾아볼 수 있도록 하는 기능은?","o":["프레젠테이션(Presentation)","인덱스(Index)","하이퍼링크(Hyperlink)","멀티미디어(Multimedia)"],"a":2,"e":"'문서와 문서를 연결'하는 기능은 하이퍼링크입니다."},{"q":"다음 중 멀티미디어의 특징에 대한 설명으로 옳지 않은 것은?","o":["멀티미디어는 '다중 매체'의 의미를 가지며, 다양한 매체를 통해 정보를 전달한다는 의미이다.","멀티미디어 데이터는 정보량이 크기 때문에 일반적으로 압축하여 저장한다.","대용량의 멀티미디어 데이터를 저장하기 위해 CD-ROM, DVD, 블루레이 디스크 등의 저장 장치가 발전하였다.","멀티미디어 동영상은 용량이 크고 통합 처리하기 어려워 사운드와 영상이 분리되어 전송된다."],"a":3,"e":"동영상은 영상과 소리가 하나의 파일로 통합되어 전송·재생됩니다. 여러 매체를 통합하는 것(통합성)이 멀티미디어의 특징입니다."},{"q":"다음 중 한글 Windows 10에서 프린터 인쇄에 관한 설명으로 옳지 않은 것은?","o":["특정한 프린터를 지정하지 않고 인쇄하면 기본 프린터로 인쇄된다.","인쇄 관리자 창에서 파일의 인쇄 진행 상황을 파악할 수 있다.","인쇄 관리자 창에서 인쇄 대기 중인 문서를 편집할 수 있다.","인쇄 관리자 창에서 문서 파일의 인쇄 작업을 취소할 수 있다."],"a":2,"e":"인쇄 관리자 창에서는 인쇄 일시 중지·다시 시작·취소만 할 수 있고, 문서 내용은 편집할 수 없습니다."},{"q":"다음 중 컴퓨터의 처리 속도를 향상시키는 방법으로 가장 효과적인 것은?","o":["RAM 확장","EIDE 포트 확장","CD-ROM 교체","모니터 교체"],"a":0,"e":"RAM(주기억장치)이 넉넉해야 여러 작업을 빠르게 처리할 수 있습니다. 포트 확장, CD-ROM·모니터 교체는 처리 속도와 거의 관계가 없습니다."},{"q":"다음 중 인터넷 주소 체계인 IPv6에 대한 설명으로 옳은 것은?","o":["주소는 8비트씩 16개 부분, 총 128비트로 구성된다.","IPv4와의 호환성은 낮으나 IPv4에 비해 품질 보장은 용이하다.","주소의 단축을 위해 각 블록에서 선행되는 0은 생략할 수 있다.","주소를 네트워크 부분의 길이에 따라 A 클래스에서 E 클래스까지 총 5단계로 구분한다."],"a":2,"e":"IPv6는 16비트씩 8개 부분(총 128비트)이며, 각 블록 앞쪽의 0을 생략해 짧게 쓸 수 있습니다. IPv4와의 호환성이 높고, A~E 클래스 구분은 IPv4의 방식입니다."},{"q":"다음 중 네트워크 연결 장치와 관련하여, 패킷의 헤더 정보를 보고 목적지를 파악하여 다음 목적지로 전송하기 위한 최선의 경로를 선택할 수 있는 장치는?","o":["허브(Hub)","브리지(Bridge)","스위치(Switch)","라우터(Router)"],"a":3,"e":"'최선의 경로를 선택'하면 라우터입니다."},{"q":"다음 중 컴퓨터에서 사용하는 유니코드(Unicode)에 대한 설명으로 옳은 것은?","o":["문자를 2바이트로 표현한다.","표현할 수 있는 최대 문자 수는 256자이다.","영문자는 7비트, 한글이나 한자는 16비트로 표현한다.","한글은 KS 완성형으로 표현한다."],"a":0,"e":"유니코드는 모든 문자를 2바이트(16비트)로 표현하는 국제 표준 코드로 65,536자까지 표현할 수 있습니다."}]}</script>
+<script src="../assets/cbt.js"></script>
+</main>
+<footer class="site-foot"><div class="wrap">컴퓨터활용능력 2급 필기 10일 합격 챌린지 강의를 바탕으로 정리한 개인 학습 자료입니다. 시험 범위와 세부 내용은 교재와 기출문제로 함께 확인하세요.</div></footer>
+</body>
+</html>
